@@ -128,6 +128,26 @@
             color: #444;
             margin-bottom: 5px;
         }
+
+        /* Project & Skills Styles */
+        .project-item {
+            margin-bottom: 25px;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 15px;
+        }
+        .project-meta {
+            color: #777;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .skill-list {
+            list-style: none;
+            padding: 0;
+        }
+        .skill-list li {
+            margin-bottom: 10px;
+        }
         
         /* Research Interest Tags */
         .tag-container {
@@ -162,7 +182,8 @@
             <div class="nav-logo">Sameer Saurav</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#publications">Publications</a></li>
             </ul>
         </div>
@@ -192,6 +213,7 @@
                 </p>
                 <p>
                     My research focuses on <strong>computational chemistry</strong>, specifically developing and utilizing enhanced sampling simulations to solve complex chemical and biological problems. Additionally, I maintain a strong research interest in <strong>computational catalysis</strong> and reaction mechanisms.
+                </p>
             </section>
 
             <section id="research">
@@ -205,13 +227,54 @@
                 </div>
             </section>
 
+            <section id="projects">
+                <h2>Projects</h2>
+
+                <div class="project-item">
+                    <h3>Graduate Research Assistant</h3>
+                    <div class="project-meta">IIT Kanpur, India | Jan 2022 - Present | Advisor: Prof. Nisanth N. Nair</div>
+                    <ul>
+                        <li>Proposed a protocol for computing rate constants corresponding to barrier crossings from Temperature Accelerated Sliced Sampling (TASS) simulations.</li>
+                        <li>Computed host-guest unbinding and binding free energies and kinetics from bidirectional TASS simulations and benchmarked them with conventional enhanced sampling techniques.</li>
+                        <li>Proposed mechanism of carbon dioxide activation reaction using zeolite-supported silver catalyst.</li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <h3>Undergraduate Research Assistant</h3>
+                    <div class="project-meta">IISER Kolkata, India | Aug 2013 - May 2014 | Advisor: Prof. Ashwani K. Tiwari</div>
+                    <ul>
+                        <li>Studied energetics of methane dissociation on Platinum and Nickel nanoclusters.</li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <h3>Visiting Undergraduate Research Assistant</h3>
+                    <div class="project-meta">University of Hyderabad, India | May - Jul 2013 | Advisor: Prof. Susanta Mahapatra</div>
+                    <ul>
+                        <li>Studied the interaction of Nitric Oxide with Gold(111) surface.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                <ul class="skill-list">
+                    <li><strong>Programming Languages:</strong> Python, Fortran, Bash, MATLAB, Mathematica</li>
+                    <li><strong>Machine Learning:</strong> PyTorch</li>
+                    <li><strong>Molecular Dynamics:</strong> OpenMM, Amber, GROMACS, PLUMED</li>
+                    <li><strong>Electronic Structure:</strong> Gaussian</li>
+                    <li><strong>Visualization:</strong> VMD, Gaussview, Matplotlib, Gnuplot</li>
+                </ul>
+            </section>
+
             <section id="publications">
-                <h2>Selected Publications</h2>
+                <h2>Publications</h2>
                 <ul>
                     <li style="margin-bottom: 15px;">
                         <strong>S Saurav</strong>, D Das, R Javed, N. N. Nair. <br>
                         <em>"Kinetics of Barrier Crossing Events from Temperature Accelerated Sliced Sampling Simulations"</em><br>
-                        <span style="color: #666;">Manuscript in review (2025)</span> | <a href="https://doi.org/10.48550/arXiv.2509.05068">Preprint</a>
+                        <span style="color: #666;">Phys. Chem. Chem. Phys. (2026)</span> | <a href="https://doi.org/10.48550/arXiv.2509.05068">Preprint</a>
                     </li>
                     <li style="margin-bottom: 15px;">
                         B Jana, M Mondal... <strong>S Saurav</strong>... <br>
