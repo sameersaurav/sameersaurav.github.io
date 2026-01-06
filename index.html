@@ -3,277 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sameer Saurav - Curriculum Vitae</title>
+    <title>Sameer Saurav | Computational Chemistry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        /* General Page Styles */
+        /* --- CSS STYLES --- */
+        :root {
+            --primary-color: #2c3e50; /* Academic Dark Blue */
+            --accent-color: #3498db;  /* Highlight Blue */
+            --bg-color: #f4f7f6;      /* Light Gray Background */
+            --text-color: #333;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #fdfdfd;
-        }
-
-        /* Header Styles */
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        h1 {
+            font-family: 'Roboto', sans-serif;
             margin: 0;
-            color: #2c3e50;
-            font-size: 2.5em;
-        }
-        .contact-info {
-            margin-top: 10px;
-            font-size: 1.1em;
-        }
-        .contact-info a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        .contact-info a:hover {
-            text-decoration: underline;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
         }
 
-        /* Section Styles */
-        section {
-            margin-bottom: 30px;
+        /* Navigation Bar */
+        nav {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        h2 {
-            border-bottom: 2px solid #eaeaea;
-            padding-bottom: 10px;
-            color: #2c3e50;
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Entry Styles (Education, Experience) */
-        .entry {
-            margin-bottom: 20px;
-        }
-        .entry-header {
+        .nav-container {
+            max-width: 1000px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .nav-logo {
+            font-size: 1.5rem;
             font-weight: bold;
-            font-size: 1.1em;
         }
-        .entry-subheader {
-            font-style: italic;
-            color: #555;
-            margin-bottom: 5px;
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
         }
-        .date {
-            font-weight: normal;
-            font-size: 0.9em;
-            color: #666;
-            min-width: 120px;
-            text-align: right;
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--accent-color);
         }
 
-        /* Lists */
-        ul {
-            list-style-type: disc;
-            margin-top: 5px;
-            padding-left: 20px;
+        /* Main Layout */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 3fr; /* Sidebar takes 1 part, Content takes 3 parts */
+            gap: 40px;
         }
-        li {
+
+        /* Sidebar (Photo & Contact) */
+        .sidebar {
+            text-align: center;
+        }
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            background-color: #ddd; /* Placeholder color */
+        }
+        .contact-info {
+            text-align: left;
+            font-size: 0.9rem;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            font-weight: bold;
+            transition: background 0.3s;
+            width: 100%; /* Full width button */
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        /* Main Content Area */
+        .content section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h3 {
+            color: #444;
             margin-bottom: 5px;
+        }
+        .job-meta {
+            color: #777;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            font-style: italic;
         }
         
-        /* Skills Tags */
-        .skill-category {
+        /* Research Interest Tags */
+        .tag-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .tag {
+            background-color: #e8f4fd;
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
             font-weight: bold;
-            display: inline-block;
-            width: 180px;
         }
 
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            .entry-header {
-                flex-direction: column;
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr; /* Stack sidebar on top of content */
             }
-            .date {
-                text-align: left;
-                margin-bottom: 5px;
+            .sidebar {
+                margin-bottom: 20px;
             }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Sameer Saurav</h1>
-        <div class="contact-info">
-            <p>
-                Department of Chemistry, <a href="https://www.iitk.ac.in/">IIT Kanpur</a>, India<br>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-logo">Sameer Saurav</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <img src="https://via.placeholder.com/200" alt="Sameer Saurav" class="profile-photo">
+            
+            <div class="contact-info">
+                <h3>Affiliation</h3>
+                <p><strong>Department of Chemistry</strong><br>Indian Institute of Technology (IIT) Kanpur</p>
+                <p><strong>Location:</strong> Kanpur, India</p>
                 
-            </p>
-        </div>
-        </header>
-
-    <section>
-        <h2>Education</h2>
-        
-        <div class="entry">
-            <div class="entry-header">
-                <span>PhD Research Fellow, Computational Chemistry</span>
-                <span class="date">Jan 2022 -- Current</span>
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;">
+                
+                <a href="https://scholar.google.com" target="_blank" class="btn" style="background-color: #fff; color: #333; border: 1px solid #ddd; margin-top: 10px;">Google Scholar</a>
             </div>
-            <div class="entry-subheader">
-                <a href="https://www.iitk.ac.in/chm/">Department of Chemistry</a>, IIT Kanpur, India
-            </div>
-            <div>Advisor: <a href="https://home.iitk.ac.in/~nnair/main.html">Prof. Nisanth N. Nair</a></div>
-        </div>
+        </aside>
 
-        <div class="entry">
-            <div class="entry-header">
-                <span>BS-MS, Chemical Sciences</span>
-                <span class="date">Aug 2009 -- May 2014</span>
-            </div>
-            <div class="entry-subheader">
-                <a href="http://www.iiserkol.ac.in/">IISER Kolkata</a>, India
-            </div>
-            <div>Advisor: <a href="https://www.iiserkol.ac.in/~ashwani/">Prof. Ashwani K. Tiwari</a></div>
-        </div>
-    </section>
+        <main class="content">
+            
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                    I am a PhD Research Fellow in Computational Chemistry at the <strong>Indian Institute of Technology (IIT) Kanpur</strong>, working under the supervision of Prof. Nisanth N. Nair. 
+                </p>
+                <p>
+                    My research focuses on developing and applying enhanced sampling methods to understand complex chemical reactions and molecular dynamics. Before my PhD, I served as an Assistant Professor and a Scientific Officer, gaining extensive experience in both teaching and applied research.
+                </p>
+            </section>
 
-    <section>
-        <h2>Experience</h2>
+            <section id="research">
+                <h2>Research Interests</h2>
+                <div class="tag-container">
+                    <span class="tag">Computational Chemistry</span>
+                    <span class="tag">Molecular Dynamics</span>
+                    <span class="tag">Enhanced Sampling</span>
+                    <span class="tag">Computational Catalysis</span>
+                    <span class="tag">Machine Learning in Chemistry</span>
+                </div>
+            </section>
 
-        <div class="entry">
-            <div class="entry-header">
-                <span>Assistant Professor</span>
-                <span class="date">Nov 2017 -- Present </span>
-            </div>
-            <div class="entry-subheader">Department of Chemistry, ANS College Nabinagar, Bihar, India</div>
-        </div>
+            <section id="experience">
+                <h2>Experience</h2>
+                
+                <div class="job">
+                    <h3>PhD Research Fellow</h3>
+                    <div class="job-meta">IIT Kanpur | Jan 2022 - Present</div>
+                    <p>Working on kinetics of barrier crossing events using Temperature Accelerated Sliced Sampling (TASS) simulations and investigating CO2 catalytic fixation.</p>
+                </div>
 
-        <div class="entry">
-            <div class="entry-header">
-                <span>Scientific Officer</span>
-                <span class="date">Aug 2015 -- Nov 2017</span>
-            </div>
-            <div class="entry-subheader">Chemical Control Laboratory, Tarapur Atomic Power Station 3 & 4, Tarapur, India</div>
-        </div>
+                <div class="job">
+                    <h3>Assistant Professor</h3>
+                    <div class="job-meta">ANS College Nabinagar, Bihar | 2017 - 2021</div>
+                    <p>Taught undergraduate chemistry courses and mentored students.</p>
+                </div>
 
-        <div class="entry">
-            <div class="entry-header">
-                <span>Trainee Scientific Officer</span>
-                <span class="date">Aug 2014 -- Jul 2015</span>
-            </div>
-            <div class="entry-subheader">BARC Training School, IGCAR, Kalpakkam, India</div>
-        </div>
-    </section>
+                <div class="job">
+                    <h3>Scientific Officer</h3>
+                    <div class="job-meta">Tarapur Atomic Power Station | 2015 - 2017</div>
+                    <p>Managed chemical control laboratories and safety protocols.</p>
+                </div>
+            </section>
 
-    <section>
-        <h2>Research Interests</h2>
-        <p>Computational Chemistry, Molecular Dynamics, Enhanced Sampling, Computational Catalysis.</p>
-    </section>
+            <section id="publications">
+                <h2> Publications</h2>
+                <ul>
+                    <li style="margin-bottom: 15px;">
+                        <strong>S Saurav</strong>, D Das, R Javed, N. N. Nair. <br>
+                        <em>"Kinetics of Barrier Crossing Events from Temperature Accelerated Sliced Sampling Simulations"</em><br>
+                        <span style="color: #666;">Manuscript in review (2025)</span> | <a href="https://doi.org/10.48550/arXiv.2509.05068">Preprint</a>
+                    </li>
+                    <li style="margin-bottom: 15px;">
+                        B Jana, M Mondal... <strong>S Saurav</strong>... <br>
+                        <em>"Recent Advancement on the Organocatalyzed Asymmetric Conjugate Addition..."</em><br>
+                        <span style="color: #666;">Asian J. Org. Chem (2023)</span> | <a href="https://doi.org/10.1002/ajoc.202300387">Link</a>
+                    </li>
+                </ul>
+            </section>
 
-    <section>
-        <h2>Publications</h2>
-        <ul>
-            <li>
-                <strong>S Saurav</strong>, D Das, R Javed, Nisanth N Nair. 
-                <a href="https://doi.org/10.48550/arXiv.2509.05068">"Kinetics of Barrier Crossing Events from Temperature Accelerated Sliced Sampling Simulations"</a>, 
-                <em>Manuscript in review</em> (2025).
-            </li>
-            <li>
-                B Jana, M Mondal, S Halder, A Mahata, <strong>S Saurav</strong>, S Paladhi. 
-                <a href="https://doi.org/10.1002/ajoc.202300387">"Recent Advancement on the Organocatalyzed Asymmetric Conjugate Addition using Maleimide as a Potential Substrate"</a>, 
-                <em>Asian J. Org. Chem</em> (2023).
-            </li>
-            <li>
-                A Mondal, H Seenivasan, <strong>S Saurav</strong>, and A K Tiwari. 
-                <a href="https://nopr.niscpr.res.in/bitstream/123456789/20373/1/IJCA%2052A%288-9%29%201056-1060.pdf">"Behavior of Water Dimer under the influence of External Electric Fields"</a>, 
-                <em>Indian J. Chem. A</em> (2013).
-            </li>
-        </ul>
-    </section>
+        </main>
+    </div>
 
-    <section>
-        <h2>Projects</h2>
-        
-        <div class="entry">
-            <div class="entry-header">
-                <span>Graduate Research Assistant</span>
-                <span class="date">Jan 2022 -- Current</span>
-            </div>
-            <div class="entry-subheader">IIT Kanpur (Advisor: Prof. Nisanth N. Nair)</div>
-            <ul>
-                <li>Proposed a protocol for computing rate constants corresponding to barrier crossings from Temperature Accelerated Sliced Sampling (TASS) simulations.</li>
-                <li>Computed host-guest unbinding and binding free energies and kinetics from bidirectional TASS simulations and benchmarked it with conventional enhanced sampling techniques.</li>
-                <li>Proposed mechanism of carbon dioxide activation reaction using zeolite supported silver catalyst.</li>
-            </ul>
-        </div>
-
-        <div class="entry">
-            <div class="entry-header">
-                <span>Undergraduate Research Assistant</span>
-                <span class="date">Aug 2013 -- May 2014</span>
-            </div>
-            <div class="entry-subheader">IISER Kolkata (Advisor: Prof. Ashwani K. Tiwari)</div>
-            <ul>
-                <li>Studied energetics of methane dissociation on Platinum and Nickel nanoclusters.</li>
-            </ul>
-        </div>
-
-        <div class="entry">
-            <div class="entry-header">
-                <span>Visiting Undergraduate Research Assistant</span>
-                <span class="date">May -- Jul 2013</span>
-            </div>
-            <div class="entry-subheader">University of Hyderabad (Advisor: Prof. Susanta Mahapatra)</div>
-            <ul>
-                <li>Studied the interaction of Nitric Oxide with Gold(111) surface.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li><span class="skill-category">Programming:</span> Python, Fortran, Bash, MATLAB, Mathematica</li>
-            <li><span class="skill-category">ML Toolkits:</span> PyTorch</li>
-            <li><span class="skill-category">Electronic Structure:</span> Gaussian</li>
-            <li><span class="skill-category">Molecular Dynamics:</span> OpenMM, Amber, GROMACS, PLUMED</li>
-            <li><span class="skill-category">Visualization:</span> VMD, Gaussview, Matplotlib, Gnuplot</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Fellowships & Awards</h2>
-        <ul>
-            <li>Junior Research Fellowship, CSIR, India (2014)</li>
-            <li>Graduate Aptitude Test in Engineering (GATE), India (2014)</li>
-            <li>Graduate Research Fellowship, Texas Tech University, USA (2014)</li>
-            <li>Graduate Research Fellowship, Indian Institute of Science (IISc) (2014)</li>
-            <li>Summer Research Fellowship, UGC Network Resource Centre, University of Hyderabad (2013)</li>
-            <li>INSPIRE Scholarship, DST, Govt. of India (2009 -- 2014)</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Poster Presentations</h2>
-        <ul>
-            <li>ACS Fall Meeting, Washington, DC, USA (Aug 2025)</li>
-            <li>Research Scholars Day, IIT Kanpur, India (May 2025)</li>
-            <li>HPC Symposium, IIT Kanpur, India (Apr 2025)</li>
-            <li>Recent Advances in Modeling Rare Events, Khajuraho, India (Mar 2025)</li>
-            <li>Physical Chemistry Symposium - 2024, IIT Bombay, India (Oct 2024)</li>
-            <li>JNCASR-CECAM Conference MD@60, JNCASR Bengaluru, India (Feb 2024)</li>
-            <li>Structure and Dynamics of Chemical and Biomolecular Systems, IIT Kanpur, India (Oct 2023)</li>
-        </ul>
-    </section>
-
-    <footer style="text-align: center; margin-top: 50px; font-size: 0.8em; color: #777;">
-        <p>Last updated: January 2026 | Hosted on GitHub Pages</p>
+    <footer style="text-align: center; padding: 20px; background: #2c3e50; color: white; margin-top: 40px;">
+        <p>&copy; 2026 Sameer Saurav. Hosted on GitHub Pages.</p>
     </footer>
 
 </body>
