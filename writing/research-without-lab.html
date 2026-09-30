@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>रिसर्च के लिए हमेशा प्रयोगशाला जरूरी नहीं — Sameer Saurav</title>
+<meta name="description" content="Undergraduate research does not always need a laboratory. A Hindi essay on computational chemistry as a route to research in colleges without infrastructure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#0a0d0c;
+    --paper-2:#111614;
+    --card:#0f1513;
+    --ink:#d6ddd3;
+    --ink-2:#a3ac9f;
+    --muted:#6f786e;
+    --rule:#222b26;
+    --accent:#4fe08a;
+    --accent-soft:rgba(79,224,138,.13);
+    --maxw:1080px;
+    --readw:38rem;
+    --serif:'JetBrains Mono',ui-monospace,monospace;
+    --sans:'IBM Plex Sans',system-ui,sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+    --deva:'Noto Sans Devanagari','IBM Plex Sans',system-ui,sans-serif;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--ink);
+    background-color:var(--paper);
+    background-image:radial-gradient(circle at 1px 1px, rgba(214,221,211,.05) 1px, transparent 0);
+    background-size:22px 22px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  body::after{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;
+    background:linear-gradient(rgba(255,255,255,0) 50%, rgba(0,0,0,.22) 50%);
+    background-size:100% 4px;opacity:.12;
+  }
+  a{color:inherit;}
+
+  /* ---------- NAV ---------- */
+  nav{
+    position:sticky;top:0;z-index:1000;
+    background:rgba(10,13,12,.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--rule);
+  }
+  .nav-inner{
+    max-width:var(--maxw);margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    gap:16px;padding:14px 24px;
+  }
+  .nav-name{
+    font-family:var(--serif);font-weight:600;font-size:1.15rem;
+    letter-spacing:-.01em;white-space:nowrap;text-decoration:none;
+  }
+  .nav-name .dot{color:var(--accent);}
+  .nav-back{
+    font-family:var(--mono);font-size:.74rem;letter-spacing:.02em;
+    text-decoration:none;color:var(--muted);
+    padding:6px 9px;border-radius:6px;white-space:nowrap;
+    transition:color .2s,background .2s;
+  }
+  .nav-back:hover{color:var(--accent);background:var(--accent-soft);}
+
+  /* ---------- ARTICLE ---------- */
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+  .art-head{
+    border-bottom:1px solid var(--rule);
+    padding:64px 0 34px;
+  }
+  .kicker{
+    font-family:var(--mono);font-size:.74rem;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--accent);margin-bottom:18px;
+  }
+  .art-head h1{
+    font-family:var(--deva);font-weight:700;
+    font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.35;
+    letter-spacing:-.01em;margin:0 0 20px;max-width:24ch;
+  }
+  .standfirst{
+    font-size:1.02rem;color:var(--ink-2);max-width:52ch;margin:0 0 24px;
+  }
+  .byline{
+    font-family:var(--mono);font-size:.76rem;color:var(--muted);
+    display:flex;flex-wrap:wrap;gap:10px;align-items:center;
+  }
+  .byline .sep{color:var(--rule);}
+
+  article{
+    padding:40px 0 70px;
+    max-width:var(--readw);
+  }
+  article p{
+    font-family:var(--deva);
+    font-size:1.09rem;
+    line-height:2.0;
+    margin:0 0 1.5em;
+    color:var(--ink);
+  }
+  article p.lead{
+    color:var(--ink);
+  }
+  article p code,article p .lat{
+    font-family:var(--mono);font-size:.94em;color:var(--ink-2);
+  }
+
+  .art-foot{
+    border-top:1px solid var(--rule);
+    padding:26px 0 70px;
+    max-width:var(--readw);
+  }
+  .art-foot p{
+    font-family:var(--deva);
+    font-size:.92rem;line-height:1.9;color:var(--muted);margin:0 0 1em;
+  }
+  .back-link{
+    font-family:var(--mono);font-size:.78rem;
+    display:inline-flex;align-items:center;gap:8px;
+    padding:8px 14px;border:1px solid var(--rule);border-radius:999px;
+    background:var(--card);text-decoration:none;color:var(--ink-2);
+    transition:border-color .2s,color .2s,transform .15s;
+  }
+  .back-link:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px);}
+
+  footer{
+    border-top:1px solid var(--rule);
+    padding:26px 0 40px;
+  }
+  footer .wrap{
+    display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
+    font-family:var(--mono);font-size:.74rem;color:var(--muted);
+  }
+
+  @media(max-width:640px){
+    .art-head{padding:44px 0 28px;}
+    article p{font-size:1.05rem;line-height:1.95;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="../index.html">Sameer Saurav<span class="dot">.</span></a>
+    <a class="nav-back" href="../index.html#writing">← Writing</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="art-head">
+    <div class="kicker">Essay · Hindi</div>
+    <h1>रिसर्च के लिए हमेशा प्रयोगशाला जरूरी नहीं</h1>
+    <p class="standfirst">
+      Undergraduate research does not always need a laboratory. Computational chemistry needs a
+      laptop, free software and open databases. The real constraint is not equipment but choosing
+      a problem the right size for one semester, and that is something college teachers already
+      know how to do.
+    </p>
+    <div class="byline">
+      <span>समीर सौरव</span>
+      <span class="sep">/</span>
+      <span>सितंबर 2026</span>
+    </div>
+  </div>
+
+  <article>
+    <p class="lead">पिछले सत्र में एक छात्र ने पूछा कि सर, रिसर्च तो बड़े संस्थानों में होती है, हमारे यहां कैसे होगी। उस वक्त मैंने कुछ सामान्य सा जवाब देकर बात टाल दी। सवाल फिर भी दिमाग में अटका रह गया।</p>
+
+    <p>अटका इसलिए रहा कि उसमें शिकायत नहीं थी। एक स्वीकृति थी। लड़का मान चुका था कि रिसर्च किसी और की दुनिया की चीज है और उस दुनिया में उसका दाखिला नहीं है।</p>
+
+    <p>चार साल के स्नातक कोर्स ने इस मामले में एक बड़ा बदलाव किया है। अब रिसर्च सिर्फ एमएससी या पीएचडी का विषय नहीं रहा, स्नातक स्तर पर ही हर विद्यार्थी को एक प्रोजेक्ट पूरा करना है। मंशा साफ है और अच्छी है। लेकिन जमीन पर इसका मतलब हर कॉलेज में एक जैसा नहीं निकलता। यहीं एक बात है जिस पर चर्चा कम हुई है।</p>
+
+    <p>बात यह कि रसायन विज्ञान का एक बड़ा हिस्सा आज कंप्यूटर पर होता है।</p>
+
+    <p>कंप्यूटेशनल केमिस्ट्री कोई नई या हाशिये की चीज नहीं है। 1998 और फिर 2013 में इसी क्षेत्र के काम पर रसायन विज्ञान का नोबेल दिया जा चुका है। दवा कंपनियां नया अणु प्रयोगशाला में बनाने से पहले उसे कंप्यूटर पर परखती हैं। इसमें न अभिकर्मक लगते हैं, न शीशे के उपकरण, न वातानुकूलित कमरा। एक ठीकठाक लैपटॉप और इंटरनेट। बस।</p>
+
+    <p>शायद यह बता देना ज्यादा उपयोगी होगा कि ऐसा प्रोजेक्ट दिखता कैसा है।</p>
+
+    <p>मान लीजिए तीसरे साल की एक छात्रा एस्पिरिन पर काम कर रही है। वह पहले उस अणु की त्रिआयामी संरचना बनाती है, फिर कंप्यूटर से उसका सबसे स्थिर रूप निकलवाती है, फिर उसकी ऊर्जा और कुछ बुनियादी गुणों की गणना करती है। इसके बाद वह देखती है कि यह अणु किसी दूसरे अणु से जुड़ने पर कैसा व्यवहार करता है। अंत में अपने नतीजों को प्रकाशित शोध से मिलाकर देखती है। कहीं मेल खाता है, कहीं नहीं खाता। जहां नहीं खाता, असली सवाल वहीं से शुरू होते हैं।</p>
+
+    <p>जो सॉफ्टवेयर इसमें लगते हैं (<span class="lat">Avogadro, ORCA, GROMACS, Python</span>), सब मुफ्त हैं और खुले स्रोत के हैं। <span class="lat">PubChem</span> और प्रोटीन डेटा बैंक जैसे डेटाबेस किसी भी विद्यार्थी के लिए उतने ही खुले हैं जितने किसी बड़े संस्थान के लिए। पढ़ने की दिक्कत भी पहले जैसी नहीं रही। ओपन एक्सेस पत्रिकाओं की संख्या तेजी से बढ़ी है, <span class="lat">arXiv</span> और <span class="lat">ChemRxiv</span> जैसे मंचों पर नया काम छपने से पहले ही उपलब्ध हो जाता है, और राष्ट्रीय डिजिटल पुस्तकालय हजारों पत्रिकाएं एक जगह ले आता है।</p>
+
+    <p>यह सब लिख देना आसान है। करना उतना आसान नहीं।</p>
+
+    <p>एक स्नातक विद्यार्थी के पास एक या दो सेमेस्टर होते हैं। समस्या बहुत बड़ी दे दी तो वह अधूरी रहेगी और बच्चा हतोत्साहित होकर लौटेगा। बहुत छोटी दे दी तो वह प्रोजेक्ट नहीं, प्रैक्टिकल बनकर रह जाएगी। सही आकार की समस्या चुनना, जो हल भी हो जाए और जिसका कुछ मतलब भी हो, यह अनुभव का काम है। असली अड़चन उपकरण नहीं, यही है।</p>
+
+    <p>और यही वह चीज है जो हमारे पास पहले से है। पिछले दो दशकों में राज्य के कॉलेजों में बड़ी संख्या में ऐसे शिक्षक आए हैं जिन्होंने देश के अच्छे संस्थानों से पीएचडी की है और जो शोध की प्रक्रिया से गुजर चुके हैं। यह क्षमता मौजूद है। उसका पूरा इस्तेमाल अभी नहीं हो रहा।</p>
+
+    <p>इसके लिए किसी बड़े बजट की जरूरत नहीं। विश्वविद्यालय स्तर पर दो-तीन दिन की छोटी कार्यशालाएं, अलग-अलग कॉलेजों के शिक्षकों के बीच प्रोजेक्ट का साझा मार्गदर्शन, और यह साफ कर देना कि कंप्यूटेशनल काम को प्रयोगात्मक काम के बराबर माना जाएगा। इतना भर काफी है शुरुआत के लिए।</p>
+
+    <p>हर विद्यार्थी शोधकर्ता नहीं बनेगा। बनना भी नहीं चाहिए। लेकिन जिनमें वह जिज्ञासा है, उन्हें कम से कम इतना पता होना चाहिए कि रास्ता बंद नहीं है।</p>
+
+    <p>फिलहाल उनमें से ज्यादातर को यह पता ही नहीं है।</p>
+  </article>
+
+  <div class="art-foot">
+    <p>लेखक ए.एन.एस. कॉलेज, नबीनगर, औरंगाबाद (मगध विश्वविद्यालय) में रसायन विज्ञान विभाग के अध्यक्ष एवं सहायक प्राध्यापक हैं। विचार व्यक्तिगत हैं।</p>
+    <a class="back-link" href="../index.html#writing">← सभी लेख</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Sameer Saurav</span>
+    <span>sameersaurav.github.io</span>
+  </div>
+</footer>
+
+</body>
+</html>
