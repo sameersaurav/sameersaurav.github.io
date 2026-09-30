@@ -7,7 +7,7 @@
 <meta name="description" content="Sameer Saurav, computational chemist (Ph.D., IIT Kanpur). Enhanced sampling, reaction-rate theory, and computational catalysis.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --paper:#0a0d0c;
@@ -24,6 +24,7 @@
     --serif:'JetBrains Mono',ui-monospace,monospace;
     --sans:'IBM Plex Sans',system-ui,sans-serif;
     --mono:'JetBrains Mono',ui-monospace,monospace;
+    --deva:'Noto Sans Devanagari','IBM Plex Sans',system-ui,sans-serif;
   }
 
   *{box-sizing:border-box;}
@@ -45,6 +46,7 @@
     background-size:100% 4px;opacity:.12;
   }
   a{color:inherit;}
+  :lang(hi){font-family:var(--deva);line-height:1.8;}
 
   /* ---------- NAV ---------- */
   nav{
@@ -270,10 +272,10 @@
     <span class="nav-name">Sameer Saurav<span class="dot">.</span></span>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#writing">Writing</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#research">Research</a></li>
       <li><a href="#publications">Publications</a></li>
-      <li><a href="#writing">Writing</a></li>
       <li><a href="#teaching">Teaching</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -291,6 +293,10 @@
         I also write about <strong>science for general readers</strong>, in English and in Hindi.
       </p>
       <div class="meta-row reveal">
+        <a class="chip" href="#writing">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/><path d="M9 7h7"/><path d="M9 11h7"/></svg>
+          Science Writing
+        </a>
         <a class="chip" href="https://scholar.google.com/citations?user=K-5O0x8AAAAJ&hl=en" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 2 9l10 6 10-6-10-6Z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg>
           Google Scholar
@@ -478,18 +484,26 @@
 
         <div class="pub">
           <h3 class="pub-title">
-            <a href="writing/chhath-chemistry.html">Thekua, Diyas and the Setting Sun: The Chemistry of Chhath</a>
+            <a href="https://researchmatters.in/news/india-is-pulling-arsenic-out-of-its-groundwater-nobody-is-saying-where-it-goes" target="_blank" rel="noopener">India Is Pulling Arsenic Out Of Its Groundwater. Nobody Is Saying Where It Goes</a>
           </h3>
-          <p class="pub-authors">Why thekua browns and keeps for weeks, what fire does to a clay diya, why the sun turns red at the time of arghya, and whether the ritual really gives us vitamin D.</p>
-          <span class="pub-venue">This website &middot; Sep 2026</span>
+          <p class="pub-authors">Arsenic filters do not destroy arsenic. They concentrate it into a sludge that Indian law treats as hazardous waste, and what becomes of that sludge in Bihar does not appear anywhere in the public record.</p>
+          <span class="pub-venue">Research Matters &middot; Sep 2026 &middot; <a href="https://researchmatters.in/news/bharata-bhajal-sa-aarasanaka-nakal-raha-ha-vaha-jata-kaha-ha-yaha-kaii-naha-btata" target="_blank" rel="noopener" lang="hi">हिंदी में</a></span>
         </div>
 
         <div class="pub">
           <h3 class="pub-title">
-            <a href="https://researchmatters.in/news/india-is-pulling-arsenic-out-of-its-groundwater-nobody-is-saying-where-it-goes" target="_blank" rel="noopener">India Is Pulling Arsenic Out Of Its Groundwater. Nobody Is Saying Where It Goes</a>
+            <a href="writing/research-without-lab.html" lang="hi">रिसर्च के लिए हमेशा प्रयोगशाला जरूरी नहीं</a>
           </h3>
-          <p class="pub-authors">Arsenic filters do not destroy arsenic. They concentrate it into a sludge that Indian law treats as hazardous waste, and what becomes of that sludge in Bihar does not appear anywhere in the public record.</p>
-          <span class="pub-venue">Research Matters &middot; Sep 2026 &middot; <a href="https://researchmatters.in/news/bharata-bhajal-sa-aarasanaka-nakal-raha-ha-vaha-jata-kaha-ha-yaha-kaii-naha-btata" target="_blank" rel="noopener">हिंदी में</a></span>
+          <p class="pub-authors">Undergraduate research does not always need a laboratory. Computational chemistry needs a laptop, free software and open databases. The real constraint is not equipment but choosing a problem the right size for one semester.</p>
+          <span class="pub-venue">This website &middot; Sep 2026 &middot; <span lang="hi">हिंदी</span></span>
+        </div>
+
+        <div class="pub">
+          <h3 class="pub-title">
+            <a href="writing/chhath-chemistry.html">Thekua, Diyas and the Setting Sun: The Chemistry of Chhath</a>
+          </h3>
+          <p class="pub-authors">Why thekua browns and keeps for weeks, what fire does to a clay diya, why the sun turns red at the time of arghya, and whether the ritual really gives us vitamin D.</p>
+          <span class="pub-venue">This website &middot; Sep 2026</span>
         </div>
 
       </div>
