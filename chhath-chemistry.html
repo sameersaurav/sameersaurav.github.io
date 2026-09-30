@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thekua, Diyas and the Setting Sun: The Chemistry of Chhath — Sameer Saurav</title>
+<meta name="description" content="Thekua browning in the kadhai, a ghee diya on the ghat, the red sun over the river: a chemist&#x27;s look at Chhath.">
+<meta name="author" content="Sameer Saurav">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Thekua, Diyas and the Setting Sun: The Chemistry of Chhath">
+<meta property="og:description" content="Thekua browning in the kadhai, a ghee diya on the ghat, the red sun over the river: a chemist&#x27;s look at Chhath.">
+<meta property="og:url" content="https://sameersaurav.github.io/writing/chhath-chemistry.html">
+<meta property="og:image" content="https://sameersaurav.github.io/writing/chhath-img/share.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Thekua, Diyas and the Setting Sun: The Chemistry of Chhath">
+<meta name="twitter:description" content="Thekua browning in the kadhai, a ghee diya on the ghat, the red sun over the river: a chemist&#x27;s look at Chhath.">
+<meta name="twitter:image" content="https://sameersaurav.github.io/writing/chhath-img/share.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#0a0d0c; --paper-2:#111614; --card:#0f1513;
+    --ink:#d6ddd3; --ink-2:#b4bcb0; --muted:#6f786e; --rule:#222b26;
+    --accent:#4fe08a; --accent-soft:rgba(79,224,138,.13);
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+    --sans:'IBM Plex Sans',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;font-family:var(--sans);color:var(--ink);background-color:var(--paper);
+    background-image:radial-gradient(circle at 1px 1px, rgba(214,221,211,.05) 1px, transparent 0);
+    background-size:22px 22px;line-height:1.75;-webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  nav{position:sticky;top:0;z-index:10;background:rgba(10,13,12,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);}
+  .nav-inner{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;}
+  .nav-name{font-family:var(--mono);font-weight:600;font-size:1.05rem;text-decoration:none;}
+  .nav-name .dot{color:var(--accent);}
+  .back{font-family:var(--mono);font-size:.76rem;color:var(--muted);text-decoration:none;}
+  .back:hover{color:var(--accent);}
+
+  article{max-width:720px;margin:0 auto;padding:56px 24px 40px;}
+  .eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 16px;}
+  h1{font-family:var(--mono);font-weight:800;font-size:clamp(1.9rem,5vw,2.7rem);line-height:1.12;letter-spacing:-.03em;margin:0 0 16px;}
+  .standfirst{font-size:1.15rem;color:var(--ink-2);font-style:italic;margin:0 0 22px;}
+  .byline{font-family:var(--mono);font-size:.78rem;color:var(--muted);padding-bottom:26px;border-bottom:1px solid var(--rule);margin-bottom:34px;}
+  .byline b{color:var(--ink);font-weight:500;}
+
+  article p{font-size:1.06rem;color:var(--ink-2);margin:0 0 20px;}
+  article h2{font-family:var(--mono);font-weight:700;font-size:1.3rem;letter-spacing:-.02em;color:var(--ink);margin:48px 0 16px;line-height:1.25;}
+  article h2::before{content:"❯ ";color:var(--accent);}
+  article h3{font-family:var(--mono);font-weight:600;font-size:1.02rem;color:var(--accent);margin:34px 0 12px;}
+
+  figure.fig{margin:34px 0;}
+  figure.fig img{display:block;width:100%;height:auto;background:#fff;border-radius:10px;padding:14px;border:1px solid var(--rule);}
+  figure.fig.narrow img{max-width:440px;margin:0 auto;}
+  figcaption{font-size:.88rem;color:var(--muted);margin-top:10px;line-height:1.55;}
+  figcaption b{color:var(--ink-2);font-weight:600;}
+
+  aside.try{margin:30px 0;padding:18px 20px;background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:8px;}
+  .try-label{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);}
+  aside.try p{margin:8px 0 0;font-size:1rem;}
+
+  .endmatter{margin-top:54px;padding-top:26px;border-top:1px solid var(--rule);}
+  .endmatter h2{margin-top:0;}
+  .endmatter ul{padding-left:20px;color:var(--ink-2);font-size:.94rem;}
+  .endmatter li{margin-bottom:8px;}
+  .about{margin-top:30px;font-size:.95rem;color:var(--muted);}
+  .about a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-soft);}
+
+  footer{padding:40px 24px;text-align:center;border-top:1px solid var(--rule);}
+  footer div{font-family:var(--mono);font-size:.74rem;color:var(--muted);margin:4px 0;}
+  @media(max-width:600px){
+    article{padding:38px 16px 30px;}
+    .nav-inner{padding:12px 16px;}
+    article p{font-size:1.02rem;}
+    figure.fig img{padding:8px;}
+  }
+</style>
+</head>
+<body>
+<nav><div class="nav-inner">
+  <a class="nav-name" href="../index.html">Sameer Saurav<span class="dot">.</span></a>
+  <a class="back" href="../index.html#writing">← Science Writing</a>
+</div></nav>
+
+<article>
+  <p class="eyebrow">Science Writing · Chemistry</p>
+  <h1>Thekua, Diyas and the Setting Sun: The Chemistry of Chhath</h1>
+  <p class="standfirst">Thekua browning in the kadhai, a ghee diya on the ghat, the red sun over the river: a chemist's look at Chhath.</p>
+  <div class="byline"><b>Sameer Saurav</b> · September 2026 · 16 min read</div>
+
+  <p>By late afternoon on the third day of Chhath, the ghats of Patna are already crowded. Most of the women and men walking down the steps have had nothing to eat or drink since the previous evening. They step into the cold Ganga carrying bamboo trays piled with sugarcane, bananas, coconuts and golden thekua, and wait. When the sun finally sinks towards the river, huge and red, thousands of trays are lifted to it at once. Well before dawn the next day, the same people are back in the water, waiting for it to rise.</p>
+  <p>Chhath is celebrated in Bihar, Jharkhand, eastern Uttar Pradesh and the Terai region of Nepal, and by people from these places wherever they now live. It is often described as one of the oldest festivals of the Sun in India. It comes six days after Diwali, so it falls in October or November. For those who keep it, Chhath is about devotion and discipline, and I do not want to explain that away. But as a chemist I cannot help noticing how much chemistry sits on a Chhath ghat: in the prasad, in the clay lamps, in the fruit, and even in the colour of the evening sky.</p>
+  <h2>Four Days, Many Reactions</h2>
+  <p>The festival runs over four days. On the first, Nahay Khay, devotees bathe and eat a simple meal of rice, bottle gourd and lentils. On the second, Kharna, they fast all day and break the fast in the evening with rasiya (rice cooked with jaggery) and roti. After that meal comes the hardest part, the nirjala vrat: about 36 hours without food or even water. The offering to the setting sun, Sandhya Arghya, is made on the third evening. The offering to the rising sun, Usha Arghya, follows the next morning, and only then is the fast broken.</p>
+  <p>Look at what the festival is made of. The winnowing trays (soop) and baskets (daura) are woven bamboo. The lamps and pots are baked clay. The offerings are fruit, roots, sugarcane, wheat, jaggery and ghee. On a traditional ghat there is hardly anything made of plastic, and nearly all of it will rot back into the soil, which matters for a festival held at the edge of rivers and ponds. Polythene is the one thing worth keeping away, and nobody should drink the river or pond water untreated. Each of the natural materials, though, has some chemistry to tell.</p>
+  <h2>Thekua: A Biscuit That Browns Itself</h2>
+  <p>When we were children, the night the thekua was made at home was the most exciting night of Chhath. The frying went on late, the whole house smelt of ghee and jaggery, and we would stay up waiting, too excited to sleep. Years later, as a chemist, I realised that a good part of that smell had a name.</p>
+  <p>No Chhath is complete without thekua. The dough is wheat flour kneaded with jaggery water and plenty of ghee. It is pressed into a carved wooden mould and deep-fried until it is golden brown. Both that colour and the toasty smell that fills the house for days before the festival come mostly from the Maillard reaction, probably the most important reaction in any kitchen.</p>
+  <p>Louis-Camille Maillard, a French chemist, described it in 1912. When sugars of a certain kind are heated with proteins or amino acids, they go through a long chain of reactions. At room temperature this happens very slowly; above about 140 °C it goes fast. Hundreds of aroma molecules come out of it, among them the nutty-smelling pyrazines, along with large brown molecules called melanoidins. It is the same reaction that browns a roti on the tawa, bread in a toaster and coffee beans in a roaster. Heat sugar further still and it starts breaking down by itself. That is caramelisation, a separate process, and it adds a slightly bitter sweetness.</p>
+  <p>The recipe hides a nice detail. Only "reducing sugars" can take part in the Maillard reaction directly. Table sugar (sucrose) is not one of them. It first has to split into glucose and fructose. Jaggery already contains some glucose and fructose along with its sucrose, and this is one reason why thekua made with gur browns sooner and deeper, and tastes richer, than thekua made with white sugar.</p>
+  <p>How it is fried matters too. The ghee or oil in the kadhai is at about 160–180 °C, but for the first few minutes the surface of the dough stays near 100 °C, because water is boiling off it. That is all the bubbling you see. Only after the surface has dried does it get hot enough to brown. So the outside turns crisp and brown while the inside stays soft.</p>
+  <figure class="fig"><img src="chhath-img/fig1_maillard.png" alt="Why gur helps thekua brown" loading="lazy"><figcaption><b>Figure 1.</b> Why gur helps thekua brown. Table sugar must first split into glucose and fructose before it can take part in the Maillard reaction; jaggery already contains some of both. A side reaction forms small amounts of acrylamide, which is kept low by not over-browning.</figcaption></figure>
+  <p>There is a less pleasant side to browning. Above about 120 °C, an amino acid called asparagine can react with sugars in starchy foods to form acrylamide, which food-safety agencies want kept as low as reasonably possible. The advice is what any good cook would give anyway: fry thekua to golden, not dark brown, and do not keep reusing the same oil, since oil heated again and again breaks down into other unwanted compounds.</p>
+  <h3>Why thekua keeps for weeks</h3>
+  <p>Thekua is often packed off to relatives in other cities and arrives days later in perfect condition, with no preservative at all. The reason is that there is very little water in it.</p>
+  <p>Bacteria and moulds need water, but they cannot use all the water in a food. Water held tightly by sugar or salt, or trapped in fat, is out of their reach. Food scientists call the usable part "water activity" and measure it from 0 (completely dry) to 1 (pure water). Most bacteria stop growing below about 0.9, and most moulds need at least about 0.8. Frying drives off most of the water in thekua, sugar holds on to much of what is left, and fat coats the rest. Microbes simply have nothing to work with. Murabba and dried fish keep for the same reason.</p>
+  <p>Thekua does go stale in the end, but usually not because of microbes. Slowly, oxygen from the air attacks the fat in the ghee and breaks it into smaller molecules, such as aldehydes, which smell rancid. Heat and light speed this up, so thekua lasts longest in an airtight tin kept somewhere cool and dark. Long before anyone had heard of water activity, our grandmothers had worked out a biscuit that could travel.</p>
+  <h2>Gur: Sugar That Kept Its Colour</h2>
+  <p>Gur is still made much as it was centuries ago. Fresh sugarcane juice is boiled in wide iron pans, and the scum of plant proteins, waxes and soil that rises to the top is skimmed off. Makers often add a slimy extract from plants of the bhindi family, which helps gather up these impurities. Some add a little lime as well. Cane juice is slightly acidic, and without the lime the heat would split too much of the sucrose into glucose and fructose, leaving gur that stays sticky and never sets.</p>
+  <p>White sugar is almost pure sucrose. Gur also contains some glucose and fructose, small amounts of minerals such as potassium, calcium and iron, and the brown compounds formed by Maillard reactions and caramelisation while it boils. These give gur its colour and its deep taste. Let us be honest, though: gur is still sugar. What it really offers is flavour and less processing, not a health miracle. Do not judge it by colour either. Some producers treat gur with chemicals to make it look pale, so the golden-brown lump is often the less processed one.</p>
+  <h2>Kharna and the Curdling Puzzle</h2>
+  <p>Rasiya, eaten on the evening of Kharna, has a small puzzle of its own. Anyone who has cooked it knows that milk sweetened with gur sometimes curdles on the boil and turns grainy. Why does that happen?</p>
+  <p>Milk is a colloid. Its main proteins, the caseins, sit in tiny clusters called micelles. These stay spread out through the milk because they carry electric charges that push them apart. Make the milk more acidic and those charges get neutralised. Near pH 4.6 the micelles stop repelling each other and clump together, and heat and extra calcium ions make this happen faster. Paneer is made exactly this way: squeeze lemon juice into hot milk and it splits into curds and whey.</p>
+  <p>Jaggery is only mildly acidic, with a pH of about 5.5 to 6. But it also carries calcium salts, both from the cane and from the lime used in making it. Stirred into milk that is already boiling, it can sometimes tip the micelles over the edge. That is why experienced cooks let the milk cool a little before adding the gur, or cook the rice in water instead. Plenty of kitchen wisdom turns out to be good colloid chemistry.</p>
+  <h2>Clay: Minerals Remade by Fire</h2>
+  <p>The prasad is cooked on a clay chulha, often in new earthen pots, and earthen diyas light up the ghats. Clay is mostly made of tiny, flat mineral crystals called aluminosilicates, of which kaolinite is a common one, mixed with fine sand and iron oxides. Wet clay can be shaped because water slips between the flat crystals and lets them slide over one another.</p>
+  <p>Firing changes clay for good. First the water between the crystals boils away. Then, at about 450–600 °C, the water that is chemically bound inside the kaolinite crystal itself is driven out, and the mineral becomes a new, disordered substance called metakaolin. Heat it further and the particles begin to fuse at their edges. This is why a baked diya never turns back into mud, however long it sits in water. The reddish colour comes from iron. Fired in plenty of air, the iron ends up as red iron(III) oxide, the same pigment that gives geru, the red ochre used on walls and floors, its colour. Fire the same clay in a smoky kiln with little air and it comes out grey or black.</p>
+  <figure class="fig"><img src="chhath-img/fig2_clay.png" alt="What happens to clay as it is fired" loading="lazy"><figcaption><b>Figure 2.</b> What happens to clay as it is fired. Loss of chemically bound water from kaolinite, at around 450–600 °C, is the irreversible step that stops a baked diya from turning back into mud.</figcaption></figure>
+  <p>Baked clay is still porous, full of tiny channels, so a new diya can soak up a surprising amount of ghee or oil. That is why many households soak their diyas in water for a few hours first. Once the pores are full of water, the oil stays in the lamp where it belongs. The same pores keep water cool in a matka: water seeps through the walls and evaporates from the outside, and every gram that evaporates takes about 2,400 joules of heat with it.</p>
+  <h2>The Flame of a Diya</h2>
+  <p>Michael Faraday built a famous set of Christmas lectures for young people, "The Chemical History of a Candle", around a single flame. A ghee diya would have served him just as well.</p>
+  <p>In the cool air of the season, ghee is solid or half-solid. The flame melts the ghee around the wick, and the liquid creeps up the cotton by capillary action, the same effect that makes water climb up blotting paper. Close to the flame the liquid turns to vapour, and it is the vapour that burns, not the liquid. You can check this yourself. Blow out a diya and a thin line of white smoke rises from the wick. Bring a lit matchstick to that smoke, and the flame will often run down it and relight the wick.</p>
+  <p>Watch the flame closely and you will see different zones. Right around the wick is a dark region of vapour that has not yet met enough oxygen to burn. Above it is the bright yellow part, where burning is incomplete. Here tiny particles of carbon form and get heated to more than a thousand degrees, and they glow the way a hot iron rod glows. Most of a diya's light comes from these glowing specks. At the very bottom of the flame, where air mixes in well, there is a faint blue band. Here the fuel burns more completely, and the blue light comes from short-lived molecular fragments such as C₂ and CH.</p>
+  <figure class="fig narrow"><img src="chhath-img/fig3_flame.png" alt="The zones of a diya flame" loading="lazy"><figcaption><b>Figure 3.</b> The zones of a diya flame. Molten ghee rises up the wick by capillary action and vaporises; the vapour burns. Glowing soot particles give the yellow light, and molecular fragments give the faint blue at the base.</figcaption></figure>
+  <p>Hold a cool steel plate over the yellow part of the flame and it soon turns black. That soot is nearly pure carbon, and it is what people have collected for centuries to make kajal.</p>
+  <h2>Why the Setting Sun Turns Red</h2>
+  <p>The most important moments of Chhath come when the sun is on the horizon, glowing orange-red. Why does it look so different from the dazzling white sun at noon?</p>
+  <p>Sunlight contains every colour of the rainbow. On its way through the air it meets countless nitrogen and oxygen molecules, which scatter part of it in all directions. They scatter short wavelengths (violet and blue) much more strongly than long ones (orange and red). Lord Rayleigh worked out in 1871 that the strength of this scattering goes as one over the fourth power of the wavelength. Blue light has a wavelength of about 450 nanometres and red light about 700, so blue is scattered roughly five to six times more than red. At midday this scattered blue reaches us from every part of the sky, which is why the sky looks blue.</p>
+  <p>When the sun is on the horizon, its light passes through far more air before it reaches us, nearly forty times as much as when the sun is overhead. Over that long path most of the blue is scattered off to the sides, and the light that comes straight to our eyes is mostly orange and red. In autumn, dust, smoke and moisture over the rivers and fields scatter even more light and can deepen the colour. The scattering of light by molecules also fascinated C.V. Raman, and his work on it led to the discovery of the Raman effect in 1928.</p>
+  <figure class="fig"><img src="chhath-img/fig4_sunset.png" alt="Why the sun looks red at the horizon" loading="lazy"><figcaption><b>Figure 4.</b> Why the sun looks red at the horizon. Left: at sunset, sunlight crosses far more air than at noon, so most of the blue is scattered out of the direct beam. Right: scattering by air molecules grows steeply at shorter wavelengths (proportional to 1/λ⁴).</figcaption></figure>
+  <p>One caution here. The low sun is gentle on the eyes only because so much of its light has been scattered away. Even at sunrise and sunset, do not stare at it for long, and never look at the sun through binoculars or any other lens.</p>
+  <h3>Does Chhath give us vitamin D?</h3>
+  <p>You will often hear that offering arghya to the rising and setting sun helps the body make vitamin D. This is a claim chemistry can test.</p>
+  <p>Our skin makes vitamin D when ultraviolet-B (UVB) light, with wavelengths of about 290–315 nanometres, strikes a molecule called 7-dehydrocholesterol. The light breaks open one of its rings to give previtamin D3, which then slowly rearranges into vitamin D3 with the help of body heat. The catch is that the ozone layer absorbs UVB strongly. When the sun is low, its light travels through a very long stretch of ozone-containing air, so very little UVB reaches the ground at sunrise or sunset. In late autumn, at Bihar's latitude, UVB is weaker than in summer even at noon. So the arghya itself probably produces very little vitamin D; the midday sun does much more. None of this takes anything away from the festival, whose meaning never depended on vitamins. It is simply how a scientist looks at a popular claim: by asking what the chemistry actually needs.</p>
+  <p>Other claims do the rounds every year: that standing in water at sunrise "detoxifies" the body, flushes out germs, or fills it with "solar energy". They sound scientific, but there is no evidence for any of them. The body gets rid of its wastes every day through the liver and kidneys, whatever the hour or place, and sunlight is not stored in the body as energy. Chhath does not need such claims. Its real science is interesting enough, and its value lies in devotion, discipline and community.</p>
+  <h2>A Basket Full of Plant Chemistry</h2>
+  <p>The soop carried to the ghat is full of plant chemistry. Sugarcane stores the sun's energy as sucrose in its stalk, sugar made by photosynthesis from light, water and carbon dioxide.</p>
+  <p>The bananas tell a story of ripening. A green banana is full of starch and green chlorophyll. As it ripens, enzymes break the starch into sugars, and the fruit turns sweet and soft. The chlorophyll breaks down too, uncovering yellow pigments called carotenoids that were there all along. What sets all this off is a very simple gas, ethylene (C2H4), which the fruit makes itself. Bananas and mangoes are called "climacteric" fruits: once they start making ethylene, they ripen quickly, even after being picked.</p>
+  <p>This is also where some traders cut corners. They ripen fruit with calcium carbide, sold in the market as "masala". Calcium carbide reacts with moisture to give off acetylene gas (C2H2), which acts like ethylene and speeds up ripening. But industrial calcium carbide carries traces of arsenic and phosphorus compounds that can leave harmful residues on the fruit, and the acetylene is itself a hazard for the people handling it. For these reasons its use for ripening is banned in India under the Food Safety and Standards (Prohibition and Restrictions on Sales) Regulations, 2011. The Food Safety and Standards Authority of India (FSSAI) allows ripening with ethylene gas under controlled conditions instead. If a fruit is evenly and brightly coloured outside but hard and tasteless inside, it may have been ripened too fast.</p>
+  <h2>Sindoor and the Colour Red</h2>
+  <p>On the ghats, married women draw a long line of orange-red sindoor from the nose up to the parting of the hair. Its chemistry goes back a long way. Traditional vermilion was made from cinnabar, which is mercury(II) sulfide (HgS). Cheaper substitutes came later, and some of them contain red lead, a lead oxide with the formula Pb3O4.</p>
+  <p>Lead is a real worry, because no level of lead exposure is considered safe, least of all for young children. A study of sindoor bought in New Jersey and in India in 2014–15 found lead in 18 of the 23 Indian samples (78 per cent) at one microgram or more per gram of powder. In 43 per cent of them the level was above 20 micrograms per gram, the upper end of the lead limits that the United States Food and Drug Administration (FDA) sets for colour additives in cosmetics. The FDA now recommends no more than 10 micrograms per gram in cosmetics applied to the skin. The Indian sample was small, but it is enough to show why care is needed. The precautions are simple: buy sindoor from reliable makers who list the ingredients, keep it out of children's reach, and never use sindoor or kumkum to colour food.</p>
+  <p>The older, plant-based red powders hold a lovely bit of chemistry. Traditional kumkum was made by treating turmeric with lime. Curcumin, the pigment in turmeric, is an acid–base indicator. It stays yellow in neutral or acidic conditions but turns a deep red-brown when things get strongly alkaline, and lime (calcium hydroxide) is strongly alkaline. So yellow turmeric becomes red.</p>
+  <figure class="fig"><img src="chhath-img/fig5_curcumin.png" alt="Turmeric as a natural indicator" loading="lazy"><figcaption><b>Figure 5.</b> Turmeric as a natural indicator. Curcumin stays yellow in acidic and neutral conditions and turns red-brown in strongly alkaline ones, which is how turmeric and lime make red kumkum.</figcaption></figure>
+  <h2>The Chemistry of a Fast</h2>
+  <p>The 36-hour nirjala fast is also a lesson in body chemistry. Between meals, the liver keeps blood glucose steady by breaking down a stored carbohydrate called glycogen, but this store lasts only about a day. After that the body burns more of its fat, and the liver turns some of it into small molecules called ketone bodies, which the brain can use as fuel. With no water coming in, a hormone called vasopressin tells the kidneys to hold on to water. This is why the fast is traditionally broken gently, with water and a little prasad. It is also why older people, and anyone with a medical condition, should talk to a doctor before fasting.</p>
+  <h2>Back to the Ghat</h2>
+  <p>Go back to the ghat at dawn on the last day. The river is cold and still. Clay lamps burn along the water's edge, their yellow light coming from glowing specks of carbon. The fruit on the bamboo trays was ripened by ethylene and sweetened by photosynthesis. The thekua, browned by the Maillard reaction and kept fresh by its own dryness, is waiting to be shared. Then the sun comes up, red at first, because the air has scattered its blue light away.</p>
+  <p>You do not need any of this chemistry to feel the beauty of the festival. But knowing it adds something. The next time you bite into a thekua, light a diya or watch the sun come up over a river, remember that atoms and molecules are at work there too, obeying the same rules that keep the stars shining.</p>
+
+  <div class="endmatter">
+    <h2>Further reading</h2>
+    <ul>
+      <li>Michael Faraday, The Chemical History of a Candle (1861; many free editions available online).</li>
+      <li>Harold McGee, On Food and Cooking: The Science and Lore of the Kitchen (Scribner, 2004).</li>
+      <li>M. Wacker and M.F. Holick, "Sunlight and Vitamin D: A global perspective for health", Dermato-Endocrinology, 5(1), 2013.</li>
+      <li>Food Safety and Standards Authority of India, "Artificial Ripening of Fruits: Ethylene Gas — A Safe Fruit Ripener", Guidance Note (revised 2020), fssai.gov.in.</li>
+      <li>M.P. Shah and others, "Lead Content of Sindoor, a Hindu Religious Powder and Cosmetic: New Jersey and India, 2014–2015", American Journal of Public Health, 107(10), 2017.</li>
+    </ul>
+    <p class="about">Sameer Saurav teaches chemistry at A.N.S. College, Nabinagar, Bihar. He holds a PhD from IIT Kanpur and a BS-MS in Chemical Sciences from IISER Kolkata, and writes on chemistry for general readers in English and Hindi. <a href="../index.html">More about him</a>.</p>
+  </div>
+</article>
+
+<footer><div>© 2026 Sameer Saurav. All rights reserved.</div><div>The text and figures on this page may not be reproduced without the author's permission.</div></footer>
+</body>
+</html>
