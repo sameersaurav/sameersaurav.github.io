@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Science Writing — Sameer Saurav</title>
+<meta name="description" content="Popular-science writing on chemistry by Sameer Saurav, in English and Hindi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Work+Sans:wght@400;500;600&family=Martian+Mono:wght@400;500&family=Noto+Serif+Devanagari:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#070912; --bg-2:#0c1020; --ink:#ece6da; --ink-2:#b5b0a6; --muted:#7c7a86; --hair:rgba(236,230,218,.12);
+    --amber:#ffb15c; --violet:#8a7dff; --teal:#5fd4c4;
+    --maxw:1120px;
+    --serif:'Young Serif',Georgia,serif;
+    --sans:'Work Sans',system-ui,sans-serif;
+    --mono:'Martian Mono',ui-monospace,monospace;
+    --deva:'Noto Serif Devanagari','Young Serif',serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:70px;}
+  body{margin:0;font-family:var(--sans);font-size:1.05rem;color:var(--ink);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased;}
+  body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.09;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  a{color:inherit;}
+  :lang(hi){font-family:var(--deva);line-height:1.85;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px;}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:linear-gradient(var(--bg),rgba(7,9,18,.0));}
+  nav.solid{background:rgba(7,9,18,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair);}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 26px;}
+  .nav-name{font-family:var(--serif);font-size:1.12rem;white-space:nowrap;text-decoration:none;}
+  .nav-name .dot{color:var(--amber);}
+  .nav-links{display:flex;gap:2px;list-style:none;margin:0;padding:0;overflow-x:auto;scrollbar-width:none;}
+  .nav-links::-webkit-scrollbar{display:none;}
+  .nav-links a{font-size:.86rem;text-decoration:none;color:var(--ink-2);padding:5px 10px;white-space:nowrap;transition:color .2s;}
+  .nav-links a:hover{color:var(--ink);}
+  .nav-links a.active,.nav-links a[aria-current]{color:var(--amber);}
+
+  header.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;}
+  #orbitals{position:absolute;inset:0;width:100%;height:100%;}
+  header.hero::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(7,9,18,.75) 0,rgba(7,9,18,.35) 45%,transparent 65%);}
+  header.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;background:linear-gradient(transparent,var(--bg));pointer-events:none;}
+  .hero-inner{position:relative;z-index:2;max-width:var(--maxw);width:100%;margin:0 auto;padding:120px 26px 80px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;}
+  .eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:18px;}
+  .hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(3rem,8.6vw,7.2rem);line-height:.95;letter-spacing:-.02em;margin:0 0 24px;text-shadow:0 0 40px rgba(7,9,18,.8);}
+  .hero h1 small{display:block;font-family:var(--mono);font-size:max(.68rem,.11em);letter-spacing:.2em;color:var(--ink-2);margin-top:14px;}
+  .caret{display:none;}
+  .hero .lede{font-size:1.15rem;color:var(--ink-2);max-width:48ch;margin:0 0 28px;}
+  .hero .lede strong{font-weight:500;color:var(--ink);}
+  .meta-row{display:flex;flex-wrap:wrap;gap:22px;}
+  .chip{font-size:.95rem;display:inline-flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);padding-bottom:4px;border-bottom:1px solid var(--amber);transition:color .2s,gap .2s;}
+  .chip svg{width:15px;height:15px;opacity:.7;}
+  .chip:hover{color:var(--amber);gap:12px;}
+  .portrait-stack{position:relative;width:210px;height:210px;}
+  .portrait-stack::before{content:"";position:absolute;inset:-40px;border-radius:50%;
+    background:radial-gradient(circle,rgba(255,177,92,.35),rgba(138,125,255,.15) 45%,transparent 70%);filter:blur(10px);}
+  .portrait,.monogram{position:relative;width:210px;height:210px;border-radius:50%;object-fit:cover;object-position:50% 25%;filter:saturate(.75) contrast(1.05);
+    box-shadow:0 0 0 1px rgba(236,230,218,.25),0 20px 60px rgba(0,0,0,.6);}
+  .monogram{display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:4rem;background:var(--bg-2);}
+  .molecule{display:none;}
+  .scroll-cue{position:absolute;z-index:2;left:50%;bottom:22px;transform:translateX(-50%);font-family:var(--mono);font-size:.62rem;letter-spacing:.2em;color:var(--muted);text-transform:uppercase;}
+
+  main{counter-reset:sec;}
+  section.block{padding:84px 0;counter-increment:sec;position:relative;}
+  section.block::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:min(var(--maxw),calc(100% - 52px));height:1px;
+    background:linear-gradient(90deg,transparent,var(--hair) 15%,var(--hair) 85%,transparent);}
+  .block-grid{display:grid;grid-template-columns:240px 1fr;gap:56px;}
+  .rail{position:sticky;top:100px;align-self:start;}
+  .rail h2{font-family:var(--serif);font-weight:400;font-size:2rem;line-height:1.1;margin:0;}
+  .body p{margin:0 0 16px;max-width:62ch;color:var(--ink-2);}
+  .body p:first-child{font-size:1.18rem;color:var(--ink);}
+  .body a.inline{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--amber);}
+  .body a.inline:hover{color:var(--amber);}
+
+  .tags{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:26px;}
+  .tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);}
+  .tag::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:8px;vertical-align:1px;
+    background:radial-gradient(circle,var(--amber),rgba(255,177,92,0) 75%);box-shadow:0 0 8px var(--amber);}
+  .tag:nth-child(even)::before{background:radial-gradient(circle,var(--violet),rgba(138,125,255,0) 75%);box-shadow:0 0 8px var(--violet);}
+
+  .entry{padding:24px 0;border-top:1px solid var(--hair);}
+  .entry:first-child{border-top:0;padding-top:0;}
+  .entry-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;}
+  .entry-title{font-family:var(--serif);font-weight:400;font-size:1.3rem;margin:0;}
+  .entry-date{font-family:var(--mono);font-size:.68rem;color:var(--muted);white-space:nowrap;}
+  .entry-sub{color:var(--muted);margin:3px 0 0;font-size:.98rem;}
+  .entry-sub a{color:var(--ink-2);border-bottom:1px solid var(--violet);text-decoration:none;}
+  .entry-sub .note{font-size:.86rem;}
+  .entry ul{margin:12px 0 0;padding:0;list-style:none;}
+  .entry li{position:relative;padding-left:22px;margin-bottom:8px;color:var(--ink-2);}
+  .entry li::before{content:"";position:absolute;left:2px;top:.6em;width:8px;height:8px;border-radius:50%;
+    background:radial-gradient(circle at 40% 40%,#fff3,var(--amber) 40%,transparent 75%);}
+
+  .pub{padding:22px 0;border-top:1px solid var(--hair);}
+  .pub:first-child{border-top:0;padding-top:0;}
+  .pub-title{font-family:var(--serif);font-weight:400;font-size:1.22rem;line-height:1.35;margin:0 0 6px;}
+  .pub-title a{text-decoration:none;transition:color .2s;}
+  .pub-title a:hover{color:var(--amber);}
+  .pub-authors{color:var(--ink-2);margin:0 0 4px;font-size:.98rem;}
+  .pub-authors b{color:var(--ink);font-weight:500;}
+  .pub-venue{font-family:var(--mono);font-size:.68rem;color:var(--muted);}
+
+  .subhead{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--violet);margin:44px 0 10px;}
+  .talks{list-style:none;margin:0;padding:0;}
+  .talks li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-top:1px solid var(--hair);color:var(--ink-2);}
+  .talks li:first-child{border-top:0;}
+  .talks .when{font-family:var(--mono);font-size:.68rem;color:var(--muted);white-space:nowrap;padding-top:4px;}
+
+  .skillrow{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:13px 0;border-top:1px solid var(--hair);align-items:baseline;}
+  .skillrow:first-child{border-top:0;}
+  .skillrow .k{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);}
+  .skillrow .v{color:var(--ink-2);}
+
+  .latest a{display:block;padding:16px 0;border-top:1px solid var(--hair);text-decoration:none;}
+  .latest a b{font-family:var(--serif);font-weight:400;font-size:1.2rem;display:block;line-height:1.35;transition:color .2s;}
+  .latest a span{font-family:var(--mono);font-size:.66rem;color:var(--muted);}
+  .latest a:hover b{color:var(--amber);}
+  .all-link{display:inline-flex;gap:8px;margin-top:22px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--amber);padding-bottom:4px;}
+  .all-link:hover{color:var(--amber);}
+
+  .feature{display:grid;grid-template-columns:260px 1fr;gap:30px;align-items:center;text-decoration:none;padding:24px;margin:8px 0 0;
+    border:1px solid var(--hair);border-radius:4px;background:linear-gradient(135deg,rgba(138,125,255,.06),rgba(255,177,92,.04));transition:border-color .3s;}
+  .feature:hover{border-color:rgba(255,177,92,.45);}
+  .feature svg{width:100%;height:auto;display:block;}
+  .feature .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);}
+  .feature h3{font-family:var(--serif);font-weight:400;font-size:1.45rem;line-height:1.25;margin:8px 0 10px;transition:color .2s;}
+  .feature:hover h3{color:var(--amber);}
+  .feature p{margin:0 0 12px!important;font-size:1rem!important;color:var(--ink-2)!important;}
+  .feature .v{font-family:var(--mono);font-size:.66rem;color:var(--muted);}
+  .hindi-link{display:inline-block;margin-top:14px;font-size:.95rem;color:var(--ink-2);border-bottom:1px solid var(--violet);text-decoration:none;}
+  footer .disclaimer{font-size:.82rem;color:var(--ink-2);max-width:56ch;margin:14px auto 0;}
+  @media(max-width:860px){.feature{grid-template-columns:1fr;}.feature svg{max-width:300px;}}
+  footer{padding:90px 26px 40px;text-align:center;position:relative;overflow:hidden;}
+  footer::before{content:"";position:absolute;left:50%;bottom:-260px;transform:translateX(-50%);width:700px;height:420px;border-radius:50%;
+    background:radial-gradient(closest-side,rgba(138,125,255,.25),transparent);}
+  footer .f-inner{position:relative;max-width:var(--maxw);margin:0 auto;}
+  footer .f-name{font-family:var(--serif);font-size:1.8rem;}
+  footer .f-name span{color:var(--amber)!important;}
+  footer .f-meta{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;color:var(--muted);margin-top:8px;}
+
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .9s ease,transform .9s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  @media(max-width:860px){
+    .hero-inner{grid-template-columns:1fr;padding:110px 22px 70px;}
+    header.hero::before{background:linear-gradient(transparent 0,rgba(7,9,18,.8) 38%,rgba(7,9,18,.9));}
+    .portrait-stack{order:-1;width:150px;height:150px;}
+    .portrait,.monogram{width:150px;height:150px;}
+    .block-grid{grid-template-columns:1fr;gap:22px;}
+    .rail{position:static;}
+    .skillrow{grid-template-columns:1fr;gap:2px;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    html{scroll-behavior:auto;}
+  }
+</style>
+<style>
+  .w-hero{position:relative;padding:150px 0 60px;overflow:hidden;}
+  .w-hero::before{content:"";position:absolute;right:-120px;top:-80px;width:620px;height:620px;border-radius:50%;
+    background:radial-gradient(closest-side,rgba(255,177,92,.22),rgba(138,125,255,.12) 55%,transparent);filter:blur(4px);}
+  .w-hero .wrap{position:relative;}
+  .w-hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.8rem,7vw,5.6rem);line-height:1;letter-spacing:-.02em;margin:0 0 22px;}
+  .w-hero h1 em{font-style:normal;color:var(--amber);}
+  .w-hero p{max-width:52ch;color:var(--ink-2);font-size:1.15rem;margin:0;}
+  .w-list{padding-bottom:60px;}
+  .w-item{display:grid;grid-template-columns:1fr 200px;gap:28px;padding:34px 0;border-top:1px solid var(--hair);counter-increment:w;position:relative;}
+  .w-list{counter-reset:w;}
+  .w-item::after{content:"";position:absolute;left:-60px;top:50%;width:240px;height:240px;transform:translateY(-50%) scale(.6);border-radius:50%;
+    background:radial-gradient(closest-side,rgba(138,125,255,.18),transparent);opacity:0;transition:opacity .5s,transform .5s;pointer-events:none;}
+  .w-item:hover::after{opacity:1;transform:translateY(-50%) scale(1);}
+  .w-item h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.4rem,2.6vw,2rem);line-height:1.2;margin:0 0 12px;}
+  .w-item h2 a{text-decoration:none;transition:color .2s;} .w-item h2 a:hover{color:var(--amber);}
+  .w-item p{margin:0;color:var(--ink-2);max-width:60ch;}
+  .w-meta{font-family:var(--mono);font-size:.68rem;color:var(--muted);line-height:1.9;padding-top:10px;}
+  .w-meta a{color:var(--violet);}
+  @media(max-width:860px){.w-item{grid-template-columns:1fr;gap:6px;}.w-meta{padding-top:6px;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="index.html">Sameer Saurav<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="writing.html" aria-current="page">Writing</a></li>
+      <li><a href="index.html#education">Education</a></li>
+      <li><a href="index.html#research">Research</a></li>
+      <li><a href="index.html#publications">Publications</a></li>
+      <li><a href="index.html#teaching">Teaching</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+    </ul>
+  </div>
+</nav>
+<header class="w-hero"><div class="wrap">
+  <div class="eyebrow">Science Writing &nbsp;·&nbsp; English &amp; <span lang="hi">हिंदी</span></div>
+  <h1>Chemistry, <em>told plainly</em></h1>
+  <p>Essays and explainers for general readers — from the indigo of Champaran to the arsenic in Bihar's groundwater.</p>
+</div></header>
+<main class="wrap w-list">
+    <article class="w-item reveal">
+      <div><h2><a href="writing/champaran-indigo.html">The Blue That Brought Gandhi to Bihar</a></h2><p>Gandhi's first satyagraha in India was fought over indigo. The chemistry of the dye, the vats of Champaran, and how a German laboratory made life harder for Bihar's indigo growers.</p></div>
+      <div class="w-meta">This website<br>Oct 2026</div>
+    </article>
+    <article class="w-item reveal">
+      <div><h2><a href="https://researchmatters.in/news/india-is-pulling-arsenic-out-of-its-groundwater-nobody-is-saying-where-it-goes" target="_blank" rel="noopener">India Is Pulling Arsenic Out Of Its Groundwater. Nobody Is Saying Where It Goes</a></h2><p>Arsenic filters do not destroy arsenic. They concentrate it into a sludge that Indian law treats as hazardous waste, and what becomes of that sludge in Bihar does not appear anywhere in the public record.</p></div>
+      <div class="w-meta">Research Matters<br>Sep 2026<br><a href="https://researchmatters.in/news/bharata-bhajal-sa-aarasanaka-nakal-raha-ha-vaha-jata-kaha-ha-yaha-kaii-naha-btata" target="_blank" rel="noopener" lang="hi">हिंदी में</a></div>
+    </article>
+    <article class="w-item reveal">
+      <div><h2 lang="hi"><a href="writing/research-without-lab.html">रिसर्च के लिए हमेशा प्रयोगशाला जरूरी नहीं</a></h2><p>Undergraduate research does not always need a laboratory. Computational chemistry needs a laptop, free software and open databases. The real constraint is not equipment but choosing a problem the right size for one semester.</p></div>
+      <div class="w-meta">This website<br>Sep 2026<br><span lang="hi">हिंदी</span></div>
+    </article>
+    <article class="w-item reveal">
+      <div><h2><a href="writing/chhath-chemistry.html">Thekua, Diyas and the Setting Sun: The Chemistry of Chhath</a></h2><p>Why thekua browns and keeps for weeks, what fire does to a clay diya, why the sun turns red at the time of arghya, and whether the ritual really gives us vitamin D.</p></div>
+      <div class="w-meta">This website<br>Sep 2026</div>
+    </article>
+</main>
+<footer>
+  <div class="f-inner">
+    <div class="f-name">Sameer Saurav<span>.</span></div>
+    <p class="disclaimer">All views expressed on this website are my own and do not represent those of my employer.</p>
+    <div class="f-meta">© 2026</div>
+  </div>
+</footer>
+<script>
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.1});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const navEl=document.querySelector('nav');const solid=()=>navEl.classList.toggle('solid',scrollY>40);solid();addEventListener('scroll',solid,{passive:true});
+</script>
+</body>
+</html>
