@@ -210,6 +210,21 @@
   .pub-authors b{color:var(--ink);}
   .pub-venue{font-family:var(--mono);font-size:.78rem;color:var(--muted);}
 
+  /* thumbnails */
+  .pub.has-thumb{display:grid;grid-template-columns:168px 1fr;gap:22px;align-items:start;}
+  .pub-thumb{
+    display:block;width:168px;aspect-ratio:16/10;overflow:hidden;
+    border:1px solid var(--rule);border-radius:8px;background:#fff;
+    transition:border-color .2s,box-shadow .2s;
+  }
+  .pub-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  .pub-thumb.contain img{object-fit:contain;padding:4px;}
+  a.pub-thumb:hover{border-color:var(--accent);box-shadow:0 0 14px rgba(15,138,69,.15);}
+  @media(max-width:560px){
+    .pub.has-thumb{grid-template-columns:104px 1fr;gap:14px;}
+    .pub-thumb{width:104px;}
+  }
+
   .subhead{
     font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;
     text-transform:uppercase;color:var(--accent);
@@ -291,20 +306,26 @@
           <span class="pub-venue">Resonance &ndash; Journal of Science Education &middot; 2026</span>
         </div>
 
-        <div class="pub">
+        <div class="pub has-thumb">
+          <a class="pub-thumb contain" href="https://doi.org/10.1039/D5CP03448E" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/pubs/pccp-2026-toc.png" alt="Table of contents graphic, PCCP 2026" loading="lazy" onerror="this.closest('.pub').classList.remove('has-thumb');this.parentNode.remove()"></a>
+          <div>
           <h3 class="pub-title">
             <a href="https://doi.org/10.1039/D5CP03448E" target="_blank" rel="noopener">Kinetics of Barrier Crossing Events from Temperature Accelerated Sliced Sampling Simulations</a>
           </h3>
           <p class="pub-authors"><b>S. Saurav</b>, D. Das, R. Javed, N. N. Nair</p>
           <span class="pub-venue">Phys. Chem. Chem. Phys. &middot; 2026</span>
+          </div>
         </div>
 
-        <div class="pub">
+        <div class="pub has-thumb">
+          <a class="pub-thumb contain" href="https://doi.org/10.1002/ajoc.202300387" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="images/pubs/ajoc-2023-toc.png" alt="Table of contents graphic, Asian J. Org. Chem. 2023" loading="lazy" onerror="this.closest('.pub').classList.remove('has-thumb');this.parentNode.remove()"></a>
+          <div>
           <h3 class="pub-title">
             <a href="https://doi.org/10.1002/ajoc.202300387" target="_blank" rel="noopener">Recent Advancement on the Organocatalyzed Asymmetric Conjugate Addition using Maleimide as a Potential Substrate</a>
           </h3>
           <p class="pub-authors">B. Jana, M. Mondal, S. Halder, A. Mahata, <b>S. Saurav</b>, S. Paladhi</p>
           <span class="pub-venue">Asian J. Org. Chem. &middot; 2023</span>
+          </div>
         </div>
 
         <div class="pub">

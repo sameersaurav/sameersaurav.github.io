@@ -210,6 +210,21 @@
   .pub-authors b{color:var(--ink);}
   .pub-venue{font-family:var(--mono);font-size:.78rem;color:var(--muted);}
 
+  /* thumbnails */
+  .pub.has-thumb{display:grid;grid-template-columns:168px 1fr;gap:22px;align-items:start;}
+  .pub-thumb{
+    display:block;width:168px;aspect-ratio:16/10;overflow:hidden;
+    border:1px solid var(--rule);border-radius:8px;background:#fff;
+    transition:border-color .2s,box-shadow .2s;
+  }
+  .pub-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  .pub-thumb.contain img{object-fit:contain;padding:4px;}
+  a.pub-thumb:hover{border-color:var(--accent);box-shadow:0 0 14px rgba(15,138,69,.15);}
+  @media(max-width:560px){
+    .pub.has-thumb{grid-template-columns:104px 1fr;gap:14px;}
+    .pub-thumb{width:104px;}
+  }
+
   .subhead{
     font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;
     text-transform:uppercase;color:var(--accent);
@@ -287,20 +302,26 @@
     <div class="wrap">
       <div class="body reveal" style="max-width:760px;">
         <div class="subhead" style="margin-top:0;">Published</div>
-        <div class="pub">
+        <div class="pub has-thumb">
+          <a class="pub-thumb" href="https://swarajyamag.com/ideas/indias-best-chemistry-textbooks-come-from-the-coaching-market-not-its-universities" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="https://swarajya.gumlet.io/swarajya/2026-10-23/xj2ul9nu/a02688c6-1fec-4324-926a-b72d296de230.jpg?w=600&amp;h=375&amp;format=jpg" alt="Cover image for the Swarajya article" loading="lazy" onerror="this.closest('.pub').classList.remove('has-thumb');this.parentNode.remove()"></a>
+          <div>
           <h3 class="pub-title">
             <a href="https://swarajyamag.com/ideas/indias-best-chemistry-textbooks-come-from-the-coaching-market-not-its-universities" target="_blank" rel="noopener">India's Best Chemistry Textbooks Come From The Coaching Market, Not Its Universities</a>
           </h3>
           <p class="pub-authors">Why Indian students still learn chemistry from foreign textbooks, and what holds back textbook writing in Indian universities: fragmented syllabi, no budgets for developing books, and promotion rules that count books instead of judging them.</p>
           <span class="pub-venue">Swarajya &middot; Oct 2026</span>
+          </div>
         </div>
 
-        <div class="pub">
+        <div class="pub has-thumb">
+          <a class="pub-thumb" href="https://researchmatters.in/news/india-is-pulling-arsenic-out-of-its-groundwater-nobody-is-saying-where-it-goes" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"><img src="https://researchmatters.in/tenancy/assets/uploads/2026/09/1790543968_Handpump_1.webp" alt="A handpump — cover image for the Research Matters article" loading="lazy" onerror="this.closest('.pub').classList.remove('has-thumb');this.parentNode.remove()"></a>
+          <div>
           <h3 class="pub-title">
             <a href="https://researchmatters.in/news/india-is-pulling-arsenic-out-of-its-groundwater-nobody-is-saying-where-it-goes" target="_blank" rel="noopener">India Is Pulling Arsenic Out Of Its Groundwater. Nobody Is Saying Where It Goes</a>
           </h3>
           <p class="pub-authors">Arsenic filters do not destroy arsenic. They concentrate it into a sludge that Indian law treats as hazardous waste, and what becomes of that sludge in Bihar does not appear anywhere in the public record.</p>
           <span class="pub-venue">Research Matters &middot; Sep 2026 &middot; <a href="https://researchmatters.in/news/bharata-bhajal-sa-aarasanaka-nakal-raha-ha-vaha-jata-kaha-ha-yaha-kaii-naha-btata" target="_blank" rel="noopener" lang="hi">हिंदी में</a></span>
+          </div>
         </div>
 
         <div class="subhead">Blog</div>
@@ -336,12 +357,15 @@
           <span class="pub-venue">Sep 2026 &middot; <span lang="hi">हिंदी</span></span>
         </div>
 
-        <div class="pub">
+        <div class="pub has-thumb">
+          <a class="pub-thumb" href="writing/chhath-chemistry.html" aria-hidden="true" tabindex="-1"><img src="writing/chhath-img/share.png" alt="The Chemistry of Chhath" loading="lazy" onerror="this.closest('.pub').classList.remove('has-thumb');this.parentNode.remove()"></a>
+          <div>
           <h3 class="pub-title">
             <a href="writing/chhath-chemistry.html">Thekua, Diyas and the Setting Sun: The Chemistry of Chhath</a>
           </h3>
           <p class="pub-authors">Why thekua browns and keeps for weeks, what fire does to a clay diya, why the sun turns red at the time of arghya, and whether the ritual really gives us vitamin D.</p>
           <span class="pub-venue">Sep 2026</span>
+          </div>
         </div>
       </div>
     </div>
