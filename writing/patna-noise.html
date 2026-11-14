@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Is Patna So Loud? — Sameer Saurav</title>
+<meta name="description" content="DJ trucks, pressure horns and what all that noise does to us. A look at why Patna is so loud, and how we might turn it down a little.">
+<meta name="author" content="Sameer Saurav">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why Is Patna So Loud?">
+<meta property="og:description" content="DJ trucks, pressure horns and what all that noise does to us. A look at why Patna is so loud, and how we might turn it down a little.">
+<meta property="og:url" content="https://sameersaurav.github.io/writing/patna-noise.html">
+<meta property="og:image" content="https://sameersaurav.github.io/writing/noise-img/cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Why Is Patna So Loud?">
+<meta name="twitter:description" content="DJ trucks, pressure horns and what all that noise does to us. A look at why Patna is so loud, and how we might turn it down a little.">
+<meta name="twitter:image" content="https://sameersaurav.github.io/writing/noise-img/cover.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ffffff; --paper-2:#f4f5f3; --card:#f7f8f6;
+    --ink:#111111; --ink-2:#333333; --muted:#6b6b6b; --rule:#e3e3e0;
+    --accent:#0f8a45; --accent-soft:rgba(15,138,69,.12);
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+    --sans:'IBM Plex Sans',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;font-family:var(--sans);color:var(--ink);background-color:var(--paper);
+    background-image:radial-gradient(circle at 1px 1px, rgba(0,0,0,.07) 1px, transparent 0);
+    background-size:22px 22px;line-height:1.75;-webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule);}
+  .nav-inner{max-width:1080px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;}
+  .nav-name{font-family:var(--mono);font-weight:600;font-size:1.05rem;text-decoration:none;}
+  .nav-name .dot{color:var(--accent);}
+  .back{font-family:var(--mono);font-size:.76rem;color:var(--muted);text-decoration:none;}
+  .back:hover{color:var(--accent);}
+
+  article{max-width:720px;margin:0 auto;padding:56px 24px 40px;}
+  .eyebrow{font-family:var(--mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 16px;}
+  h1{font-family:var(--mono);font-weight:800;font-size:clamp(1.9rem,5vw,2.7rem);line-height:1.12;letter-spacing:-.03em;margin:0 0 16px;}
+  .standfirst{font-size:1.15rem;color:var(--ink-2);font-style:italic;margin:0 0 22px;}
+  .byline{font-family:var(--mono);font-size:.78rem;color:var(--muted);padding-bottom:26px;border-bottom:1px solid var(--rule);margin-bottom:34px;}
+  .byline b{color:var(--ink);font-weight:500;}
+
+  article p{font-size:1.06rem;color:var(--ink-2);margin:0 0 20px;}
+  article h2{font-family:var(--mono);font-weight:700;font-size:1.3rem;letter-spacing:-.02em;color:var(--ink);margin:48px 0 16px;line-height:1.25;}
+  article h2::before{content:"❯ ";color:var(--accent);}
+  article h3{font-family:var(--mono);font-weight:600;font-size:1.02rem;color:var(--accent);margin:34px 0 12px;}
+
+  figure.fig{margin:34px 0;}
+  figure.fig img{display:block;width:100%;height:auto;background:#fff;border-radius:10px;padding:14px;border:1px solid var(--rule);}
+  figure.cover img{padding:0;border:0;}
+  figure.fig.narrow img{max-width:440px;margin:0 auto;}
+  figcaption{font-size:.88rem;color:var(--muted);margin-top:10px;line-height:1.55;}
+  figcaption b{color:var(--ink-2);font-weight:600;}
+
+  aside.try{margin:30px 0;padding:18px 20px;background:var(--card);border:1px solid var(--rule);border-left:3px solid var(--accent);border-radius:8px;}
+  .try-label{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);}
+  aside.try p{margin:8px 0 0;font-size:1rem;}
+
+  .endmatter{margin-top:54px;padding-top:26px;border-top:1px solid var(--rule);}
+  .endmatter h2{margin-top:0;}
+  .endmatter ul{padding-left:20px;color:var(--ink-2);font-size:.94rem;}
+  .endmatter li{margin-bottom:8px;}
+  .about{margin-top:30px;font-size:.95rem;color:var(--muted);}
+  .about a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-soft);}
+
+  footer{padding:40px 24px;text-align:center;border-top:1px solid var(--rule);}
+  footer div{font-family:var(--mono);font-size:.74rem;color:var(--muted);margin:4px 0;}
+  @media(max-width:600px){
+    article{padding:38px 16px 30px;}
+    .nav-inner{padding:12px 16px;}
+    article p{font-size:1.02rem;}
+    figure.fig img{padding:8px;}
+  }
+</style>
+</head>
+<body>
+<nav><div class="nav-inner">
+  <a class="nav-name" href="../index.html">Sameer Saurav<span class="dot">.</span></a>
+  <a class="back" href="../writing.html">← Writing</a>
+</div></nav>
+
+
+<article>
+  <p class="eyebrow">Science · City life</p>
+  <h1>Why Is Patna So Loud?</h1>
+  <p class="standfirst">DJ trucks, pressure horns and what all that noise does to us. A look at why Patna is so loud, and how we might turn it down a little.</p>
+  <div class="byline"><b>Sameer Saurav</b> · 14 November 2026 · 9 min read</div>
+  <figure class="fig cover"><img src="noise-img/cover.png" alt="A DJ truck with loudspeakers and a dancing crowd on a Patna street at midnight, while in the next building a student, an elderly man and a mother with a crying baby cover their ears"></figure>
+
+  <p>It's almost midnight. The procession went past hours ago, but the DJ truck has stopped at the corner of the lane and shows no sign of leaving. The bass comes straight through the walls and the window panes rattle. Upstairs, a girl with a board exam next week has given up on her books. An old man who should have been asleep long ago is sitting up in bed. A baby won't stop crying. And down on the road, a group of young men are dancing as if there's no tomorrow. Honestly, they look very happy.</p>
+  <p>If you live in Patna, you have seen this many times. It happens every festival season, and again at weddings, birthday parties and election rallies. For a while now I have been thinking about it, as someone who lives here and as someone who teaches science. How loud does it actually get? Why do we keep doing it? And is there a way to celebrate without it?</p>
+
+  <h2>A little physics first</h2>
+  <p>When we hear that a speaker was playing at 110 decibels and the limit is 55, most of us think it was about double the limit. It is much worse than that.</p>
+  <p>Decibels work on a logarithmic scale. Add 10 dB and the sound energy goes up ten times. Add 20 and it goes up a hundred times, add 30 and it's a thousand. Under the Noise Pollution (Regulation and Control) Rules, 2000, the limit for residential areas is 55 dB during the day and 45 dB at night. Near hospitals and schools, which count as silence zones, the daytime limit is 50.</p>
+  <p>In 2013, figures from the Bihar State Pollution Control Board (BSPCB), reported by The Times of India, put the loudest festival venue in Patna at 106.7 dB. That is about 52 dB above the daytime limit for a residential area. In terms of sound energy, it works out to roughly one and a half lakh times what the law allows.</p>
+  <p>Our ears don't hear it as lakhs of times louder, because hearing itself works roughly on a log scale. A common rule of thumb is that a sound seems twice as loud for every extra 10 dB. Even going by that, 52 dB over the limit feels about 36 times as loud as it should.</p>
+
+  <h2>What it does to our ears</h2>
+  <p>Hearing damage depends on how loud a sound is and how long we are exposed to it. Occupational safety guidelines usually allow 85 dB for eight hours a day. Every extra 3 dB doubles the sound energy, so the safe time gets cut in half each time.</p>
+  <figure class="fig"><img src="noise-img/fig1_safe_time.png" alt="Bar chart of safe daily listening time: 8 hours at 85 dB, 1 hour at 94 dB, 15 minutes at 100 dB and 3.2 minutes at 106.7 dB" loading="lazy"><figcaption><b>Figure 1.</b> How fast the safe listening time shrinks. Calculated from the 85 dB / 3 dB rule used for workplace noise.</figcaption></figure>
+  <p>So at 100 dB you have about fifteen minutes, and at 106.7 dB, the loudest venue measured in 2013, a little over three minutes. The people most at risk are actually not the neighbours. They are the ones right next to the speakers: the DJ, the organisers, the boys dancing in front. The neighbours pay in other ways. They lose sleep, they get irritable, their blood pressure goes up, and children can't study. The BSPCB chairman has himself said that noise causes irritability, hearing loss, high blood pressure and heart problems.</p>
+
+  <h2>It isn't only festivals</h2>
+  <p>Festival nights are the loudest, but Patna is noisy on ordinary days too.</p>
+  <p>A lot of this comes from our horns. A Transport Department survey found that at seven of the city's busiest crossings, the noise from honking went as high as 110 dB, louder than the loudest festival venue measured in 2013. When the department asked people about it, many said the constant honking left them angry and stressed, and some linked it to accidents. Two-wheelers and autos were named as the most frequent honkers. Pressure horns are even worse, and the High Court's 2026 directions mention them along with DJs and loudspeakers.</p>
+  <p>Then there is everything else: diesel generators during power cuts, construction work that goes on into the evening, autos and bikes with noisy engines, loudspeakers at shops and functions. BSPCB officials have named three-wheelers, honking, generator sets and construction without barriers as the main everyday sources in the city. None of these feels like much on its own. Put together, they mean many of us never really get a quiet hour, festival or no festival.</p>
+
+  <h2>Why do we do it?</h2>
+  <p>It's easy to say that the people playing loud music simply don't care about anyone. I don't believe that for a moment. The boy dancing next to the speaker is often the same boy who carried your gas cylinder up the stairs last month. On any other day, most of them would be the first to help a neighbour who fell ill. So I would rather ask what keeps pulling all of us towards louder and louder music. Psychology and physiology have some interesting answers.</p>
+  <p>Part of the reason lies in the body itself. In 2000, two researchers, Neil Todd and Frederick Cody, showed that loud dance music above about 90 dB can stimulate the vestibular system, the part of the inner ear that looks after balance. They suggested that this gives a pleasant feeling of movement, which may explain why people go looking for loud music. You don't just hear heavy bass, you feel it in your chest. That is probably why music at 70 dB feels flat to someone who wants to dance.</p>
+  <p>Then there is the crowd. The sociologist Émile Durkheim called it collective effervescence, the charge you feel when you are part of a big, excited group of people. Later studies found it is closely tied to simply being in a crowd, and a 2024 study linked it with happiness that lasts well after a live music event. When the music is that loud you can't hear yourself think, and in a way that is the whole point. You stop being one person and become part of the group.</p>
+  <p>What I find most interesting is that the same noise sounds different depending on who is listening. In 2013, a group of psychologists studied pilgrims at a month-long religious gathering in North India, where loud sound goes on day and night. Whether people found the noise pleasant or unpleasant depended on what it meant to them. Pilgrims who felt part of the event sometimes even found it calming. Older research also shows that we are far more bothered by noise we can't control. Think of the boy dancing next to the speaker and the girl trying to study two lanes away. For him it's his own celebration, at a volume he chose. For her it's something coming in through the window that she can't switch off. Both are honestly describing what they feel, and that is why arguments between them rarely go anywhere.</p>
+  <p>There is competition too. When a neighbourhood has several festival venues and processions, being loud is one way of getting noticed. If the next committee is louder, yours has to be louder still, and nobody wants to be the first to turn it down. Economists call this the tragedy of the commons. Each group gains a little by being louder, and in the end everyone loses sleep and hearing. A quiet night belongs to all of us, so nobody really looks after it.</p>
+  <p>Loud music can also push away bad feelings for a while. Researchers at the Indian School of Business found that people whose self-image had just taken a knock chose to listen to music at a much higher volume, and the noise took their mind off it for some time. I'm not judging anyone here. Wanting music to lift your mood when life feels heavy is a very human thing.</p>
+  <p>There's also the fact that the person at the controls often can't tell how loud it has become. After a few hours next to a speaker, the ear loses some of its sensitivity for a while. Doctors call this a temporary threshold shift. The DJ really can't hear how loud it is anymore, so he turns it up again.</p>
+  <p>With horns, I think habit plays the biggest part. Many of us press the horn without thinking, just to say "I'm here", even when the road ahead is clear or the traffic in front can't move anyway. It has become a reflex more than a signal, and since everyone else is honking, one more honk doesn't feel like it adds anything.</p>
+
+  <h2>The rules are already there</h2>
+  <p>We are not short of rules. Bihar has had a law on loudspeakers since 1955. The national noise rules of 2000 set limits for each kind of area and don't allow loudspeakers between 10 pm and 6 am, except in a few cases. At the edge of a public place, noise is not supposed to go more than 10 dB above the limit for that area. In 2005, the Supreme Court said clearly that nobody has a fundamental right to make amplified noise.</p>
+  <p>The Patna High Court has also taken up the matter. In August 2026, it asked officials across Bihar to make sure these limits on DJs, loudspeakers and pressure horns are followed.</p>
+  <p>Still, rules on their own don't make a city quieter. A rule works best when people already agree with it, and that kind of agreement can't be ordered from above. It comes from people talking to each other, in families, in neighbourhoods and in festival committees.</p>
+
+  <h2>Celebrating a little more softly</h2>
+  <p>If I'm right about why we do it, then nobody needs to give up the fun. Everything people enjoy about the music still works at a lower volume. If the speakers face the crowd instead of the whole neighbourhood, the dancers still feel the bass. Our festivals were full of drums, songs and people long before DJ trucks came along, and nobody felt anything was missing. Committees could compete on decoration, on how well they manage the crowd and how they look after visitors, instead of on decibels. Patna could even give an award every year to the best-run quiet venue. And the 10 pm limit is there for the student, the patient and the baby. Sticking to it costs the celebration very little.</p>
+  <p>Maybe it can start with a few questions. When your committee meets this year to book the sound system, someone could ask: How loud do we really need it? Who lives closest to the speakers? Is anyone nearby ill, or preparing for an exam? Can we stop by ten?</p>
+  <p>The same kind of small question works on the road. Before pressing the horn, we could ask ourselves whether it will actually move anyone. In a traffic jam, it almost never does. BSPCB has asked people in Patna to keep Sundays free of honking. That seems like a good place for each of us to start.</p>
+  <p>Asking these questions won't spoil anyone's festival. It only adds a little care.</p>
+  <p>Festivals are meant to bring us together. With a little thought, they can do that without keeping anyone awake.</p>
+
+  <div class="endmatter">
+    <p class="about">Sameer Saurav teaches chemistry at A.N.S. College, Nabinagar, Bihar. He holds a PhD from IIT Kanpur and a BS-MS in Chemical Sciences from IISER Kolkata, and writes on chemistry for general readers in English and Hindi. <a href="../index.html">More about him</a>.</p>
+  </div>
+</article>
+
+<footer><div>© 2026 Sameer Saurav. All rights reserved.</div><div>The text and figures on this page may not be reproduced without the author's permission.</div></footer>
+</body>
+</html>
