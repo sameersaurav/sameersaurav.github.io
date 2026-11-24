@@ -374,22 +374,20 @@
   .hero a.inline:hover{border-color:var(--accent);}
 
   /* ---------- CONTACT ---------- */
-  .contact{background:var(--ink);color:#fff;border-radius:32px 32px 0 0;margin-top:48px;}
+  .contact{background:transparent;color:var(--ink);margin-top:8px;}
   .contact-inner{max-width:var(--maxw);margin:0 auto;padding:52px 24px 44px;
     display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px;}
   .contact h2{font-family:var(--serif);font-weight:700;font-size:2rem;margin:0;letter-spacing:-.01em;}
   .contact h2::before{content:"❯ ";color:var(--accent);}
-  .contact p{margin:0;max-width:52ch;color:#cfd3cf;font-size:1.02rem;line-height:1.6;}
+  .contact p{margin:0;max-width:52ch;color:var(--ink-2);font-size:1.02rem;line-height:1.6;}
   .c-btns{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:10px;width:100%;max-width:560px;}
   .c-btn{height:46px;display:flex;align-items:center;justify-content:center;gap:9px;
     border-radius:999px;font-family:var(--mono);font-size:.82rem;font-weight:500;text-decoration:none;
-    background:#fff;color:var(--ink);border:1px solid #fff;transition:background .2s,color .2s,transform .15s;}
+    background:var(--ink);color:#fff;border:1px solid var(--ink);transition:background .2s,color .2s,transform .15s;}
   .c-btn:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-1px);}
   .c-btn svg{flex:none}
-  .contact + footer{background:var(--ink);color:#fff;padding-top:0;}
-  .contact + footer .f-inner{border-top:1px solid #333;padding-top:28px;}
-  .contact + footer .disclaimer{color:#b5b9b5;}
-  .contact + footer .f-meta{color:#8a8f8a;}
+  .contact + footer{padding-top:0;}
+  .contact + footer .f-inner{border-top:1px solid var(--rule);padding-top:28px;}
   .chip.cta{background:var(--accent);border-color:var(--accent);color:#fff;}
   .chip.cta:hover{background:var(--accent-2);color:#fff;}
   .hl{font-weight:600;color:var(--ink);text-decoration:none;background:linear-gradient(transparent 55%,rgba(15,138,69,.22) 55%);padding:0 2px;transition:background .2s;}
