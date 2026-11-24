@@ -5,6 +5,114 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sameer Saurav — Computational Chemist</title>
 <meta name="description" content="Sameer Saurav, computational chemist (Ph.D., IIT Kanpur). Enhanced sampling, reaction-rate theory, and computational catalysis.">
+<link rel="canonical" href="https://sameersaurav.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Sameer Saurav">
+<meta property="og:title" content="Sameer Saurav — Computational Chemist">
+<meta property="og:description" content="Sameer Saurav, computational chemist (Ph.D., IIT Kanpur). Enhanced sampling, reaction-rate theory, and computational catalysis.">
+<meta property="og:url" content="https://sameersaurav.github.io/">
+<meta property="og:image" content="https://sameersaurav.github.io/images/share.jpg">
+<meta property="og:image:alt" content="Portrait of Sameer Saurav">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sameer Saurav — Computational Chemist">
+<meta name="twitter:description" content="Sameer Saurav, computational chemist (Ph.D., IIT Kanpur). Enhanced sampling, reaction-rate theory, and computational catalysis.">
+<meta name="twitter:image" content="https://sameersaurav.github.io/images/share.jpg">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Person",
+   "@id": "https://sameersaurav.github.io/#person",
+   "name": "Sameer Saurav",
+   "honorificPrefix": "Dr.",
+   "jobTitle": "Assistant Professor of Chemistry",
+   "description": "Computational chemist working on molecular dynamics, enhanced sampling and reaction-rate theory; writes essays and explainers on chemistry, education and everyday life.",
+   "url": "https://sameersaurav.github.io/",
+   "image": "https://sameersaurav.github.io/images/share.jpg",
+   "worksFor": {
+    "@type": "CollegeOrUniversity",
+    "name": "A.N.S. College, Nabinagar",
+    "address": {
+     "@type": "PostalAddress",
+     "addressLocality": "Nabinagar",
+     "addressRegion": "Bihar",
+     "addressCountry": "IN"
+    }
+   },
+   "alumniOf": [
+    {
+     "@type": "CollegeOrUniversity",
+     "name": "Indian Institute of Technology Kanpur",
+     "url": "https://www.iitk.ac.in/"
+    },
+    {
+     "@type": "CollegeOrUniversity",
+     "name": "Indian Institute of Science Education and Research Kolkata",
+     "url": "https://www.iiserkol.ac.in/"
+    }
+   ],
+   "hasCredential": [
+    {
+     "@type": "EducationalOccupationalCredential",
+     "credentialCategory": "degree",
+     "name": "PhD, Chemistry",
+     "recognizedBy": {
+      "@type": "CollegeOrUniversity",
+      "name": "IIT Kanpur"
+     }
+    },
+    {
+     "@type": "EducationalOccupationalCredential",
+     "credentialCategory": "degree",
+     "name": "BS-MS, Chemical Sciences",
+     "recognizedBy": {
+      "@type": "CollegeOrUniversity",
+      "name": "IISER Kolkata"
+     }
+    }
+   ],
+   "knowsAbout": [
+    "Computational chemistry",
+    "Molecular dynamics",
+    "Enhanced sampling",
+    "Free energy calculations",
+    "Reaction-rate theory",
+    "Host-guest chemistry",
+    "Physical chemistry",
+    "Science writing"
+   ],
+   "knowsLanguage": [
+    "en",
+    "hi"
+   ],
+   "sameAs": [
+    "https://www.linkedin.com/in/sameer-saurav/",
+    "https://orcid.org/0009-0002-0281-1977"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://sameersaurav.github.io/#website",
+   "url": "https://sameersaurav.github.io/",
+   "name": "Sameer Saurav",
+   "publisher": {
+    "@id": "https://sameersaurav.github.io/#person"
+   }
+  },
+  {
+   "@type": "ProfilePage",
+   "@id": "https://sameersaurav.github.io/#profile",
+   "url": "https://sameersaurav.github.io/",
+   "mainEntity": {
+    "@id": "https://sameersaurav.github.io/#person"
+   },
+   "inLanguage": "en"
+  }
+ ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -263,6 +371,28 @@
   .hero .lede-group .lede:last-child{margin-bottom:0;}
   .hero a.inline{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-soft);}
   .hero a.inline:hover{border-color:var(--accent);}
+
+  /* ---------- CONTACT ---------- */
+  .contact{background:var(--ink);color:#fff;border-radius:32px 32px 0 0;margin-top:48px;}
+  .contact-inner{max-width:var(--maxw);margin:0 auto;padding:52px 24px 44px;
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px;}
+  .contact h2{font-family:var(--serif);font-weight:700;font-size:2rem;margin:0;letter-spacing:-.01em;}
+  .contact h2::before{content:"❯ ";color:var(--accent);}
+  .contact p{margin:0;max-width:52ch;color:#cfd3cf;font-size:1.02rem;line-height:1.6;}
+  .c-btns{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:10px;width:100%;max-width:400px;}
+  .c-btn{height:46px;display:flex;align-items:center;justify-content:center;gap:9px;
+    border-radius:999px;font-family:var(--mono);font-size:.82rem;font-weight:500;text-decoration:none;
+    background:#fff;color:var(--ink);border:1px solid #fff;transition:background .2s,color .2s,transform .15s;}
+  .c-btn:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-1px);}
+  .c-btn svg{flex:none}
+  .contact + footer{background:var(--ink);color:#fff;padding-top:0;}
+  .contact + footer .f-inner{border-top:1px solid #333;padding-top:28px;}
+  .contact + footer .disclaimer{color:#b5b9b5;}
+  .contact + footer .f-meta{color:#8a8f8a;}
+  .chip.cta{background:var(--accent);border-color:var(--accent);color:#fff;}
+  .chip.cta:hover{background:var(--accent-2);color:#fff;}
+  .hl{font-weight:600;color:var(--ink);text-decoration:none;background:linear-gradient(transparent 55%,rgba(15,138,69,.22) 55%);padding:0 2px;transition:background .2s;}
+  .hl:hover{background:linear-gradient(transparent 0%,rgba(15,138,69,.22) 0%);}
 </style>
 </head>
 <body>
@@ -302,7 +432,11 @@
           among others, and I publish other pieces on my <a class="inline" href="writing.html">blog</a>.
         </p>
         <p class="lede">
-          <strong>Email:</strong> ssaurav.iiserk [at] gmail [dot] com
+          I am <a class="hl" href="#contact">open to commissions</a> for explainers, op-eds and features,
+          and happy to be a source for stories on chemistry and science education.
+        </p>
+        <p class="lede" style="margin-top:22px;">
+          <a class="chip cta" href="#contact">Get in touch ↓</a>
         </p>
       </div>
     </div>
@@ -324,6 +458,20 @@
 <main>
 
 </main>
+
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="contact-inner">
+    <div>
+      <h2 id="contact-h">Contact me</h2>
+    </div>
+    <div class="c-btns">
+      <a class="c-btn" id="mail-btn" href="#contact">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email me</a>
+      <a class="c-btn" href="https://www.linkedin.com/in/sameer-saurav/" target="_blank" rel="noopener me">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3V9.5Zm7 0h3.8v1.6h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.1c0-1.22-.02-2.78-1.7-2.78-1.7 0-1.96 1.33-1.96 2.7V21h-4V9.5Z"/></svg>LinkedIn</a>
+    </div>
+  </div>
+</section>
 
 <footer>
   <div class="f-inner">
@@ -354,6 +502,9 @@
     });
   },{rootMargin:'-45% 0px -50% 0px'});
   document.querySelectorAll('section.block').forEach(s=>navIO.observe(s));
+  // build email link at runtime (keeps the address out of the page source)
+  (function(){const u='ssaurav.iiserk', d='gmail.com', b=document.getElementById('mail-btn');
+    if(b){b.href='mailto:'+u+'@'+d; b.title=u+'@'+d;}})();
 </script>
 
 </body>
